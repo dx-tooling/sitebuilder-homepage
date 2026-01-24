@@ -2,6 +2,8 @@
 
 Marketing homepage for SiteBuilder - the AI-powered content editing platform for teams.
 
+A [DX·Tooling](https://dx-tooling.org) project.
+
 ## About SiteBuilder
 
 SiteBuilder lets non-technical teams edit web content through natural language chat while engineers maintain Git workflows, code reviews, and full control. It bridges the gap between ease of use and engineering best practices.
