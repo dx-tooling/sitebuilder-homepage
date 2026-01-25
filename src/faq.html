@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+    <title>FAQ - SiteBuilder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Frequently asked questions about SiteBuilder.">
+
+    <include src="partials/theme-fouc-guard.html"></include>
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200 overflow-x-hidden">
+
+<div class="container mx-auto px-4 py-8 max-w-5xl">
+    <header class="mb-12 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:underline">SiteBuilder</a>
+            <span class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5">FAQ</span>
+        </div>
+
+        <!-- Theme Toggle Controller -->
+        <div data-controller="theme">
+            <button
+                data-theme-target="toggleButton"
+                data-action="click->theme#toggle"
+                aria-label="Toggle theme"
+                class="p-2 rounded-md text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white
+                       hover:bg-gray-100 dark:hover:bg-gray-800
+                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 dark:focus:ring-offset-gray-900
+                       cursor-pointer transition-colors duration-200"
+            >
+                <!-- Sun icon (shown in dark mode) -->
+                <svg data-theme-target="sunIcon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+                <!-- Moon icon (shown in light mode) -->
+                <svg data-theme-target="moonIcon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-3 text-gray-900 dark:text-gray-100">Frequently Asked Questions</h1>
+            <p class="text-gray-700 dark:text-gray-300 max-w-2xl">
+                Answers to common questions about SiteBuilder, how it fits into engineering workflows, and what teams can expect.
+            </p>
+        </section>
+
+        <section class="space-y-4">
+            <details class="group bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+                    <span class="font-semibold text-gray-900 dark:text-gray-100">What is SiteBuilder?</span>
+                    <span class="mt-0.5 text-gray-500 dark:text-gray-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    SiteBuilder is an AI-assisted content editing workflow that lets non-technical teammates propose website updates in natural language, while engineers keep Git history, reviews, and deployment control.
+                </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+                    <span class="font-semibold text-gray-900 dark:text-gray-100">Do I need to know how to code to make changes?</span>
+                    <span class="mt-0.5 text-gray-500 dark:text-gray-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    No. The goal is that editors describe changes in plain language. Engineers can still review the resulting diffs before anything is merged.
+                </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+                    <span class="font-semibold text-gray-900 dark:text-gray-100">How do approvals and code reviews work?</span>
+                    <span class="mt-0.5 text-gray-500 dark:text-gray-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Changes are intended to flow through normal Git workflows (branches, pull requests, and reviews). Your team decides what gets merged and deployed.
+                </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+                    <span class="font-semibold text-gray-900 dark:text-gray-100">Is the AI allowed to deploy to production?</span>
+                    <span class="mt-0.5 text-gray-500 dark:text-gray-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    The intended model is “assist, don’t autonomously ship.” Teams keep control through reviews and CI. (Exact permissions depend on how you integrate it.)
+                </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+                    <span class="font-semibold text-gray-900 dark:text-gray-100">Can we use this with an existing site?</span>
+                    <span class="mt-0.5 text-gray-500 dark:text-gray-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Yes—SiteBuilder is designed to integrate with a repository you already have. How much work is required depends on your stack and how you structure content.
+                </div>
+            </details>
+
+            <details class="group bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+                    <span class="font-semibold text-gray-900 dark:text-gray-100">Where can I learn more or contribute?</span>
+                    <span class="mt-0.5 text-gray-500 dark:text-gray-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    The project is open source. Visit the GitHub repository to explore the codebase and contribute.
+                    <div class="mt-3">
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 dark:text-blue-300 hover:underline" href="https://github.com/dx-tooling/sitebuilder-webapp" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section class="mt-12">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg p-6 text-white shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Still have questions?</h2>
+                <p class="text-sm text-white/90 mb-4">Open an issue on GitHub and we’ll help you out.</p>
+                <a
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white text-gray-900 font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-blue-700"
+                    href="https://github.com/dx-tooling/sitebuilder-webapp/issues"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Go to Issues
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16 py-8">
+    <div class="container mx-auto px-4 text-center text-sm text-gray-600 dark:text-gray-400">
+        &copy; 2026 <a href="https://dx-tooling.org" class="hover:underline">DX·Tooling</a>. All rights reserved.
+    </div>
+    <div class="container mt-4 mx-auto px-4 text-center text-xs text-gray-500 dark:text-gray-500">
+        SiteBuilder is an open source project by <a href="https://dx-tooling.org" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400">DX·Tooling</a> |
+        <a href="/faq.html" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400">FAQ</a> |
+        <a href="https://github.com/dx-tooling/sitebuilder-webapp" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+    </div>
+</footer>
+
+<!-- Main JS bundle will be injected by HtmlWebpackPlugin -->
+</body>
+
+</html>
+
+Error: File does not exist: /var/www/public/workspaces/019bf537-06be-7e2f-902c-fcd084ab27b2/src/faq.html
