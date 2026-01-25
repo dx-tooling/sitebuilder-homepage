@@ -53,7 +53,7 @@ export default class extends Controller {
         if (this.hasToggleButtonTarget) {
             this.toggleButtonTarget.setAttribute(
                 "aria-label",
-                effectiveTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+                effectiveTheme === "dark" ? "Switch to light mode" : "Switch to dark mode",
             );
         }
     }
