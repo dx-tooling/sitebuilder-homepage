@@ -1,10 +1,14 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-    static targets = ["toggleButton"];
+    static targets = ["toggleButton", "sunIcon", "moonIcon"];
 
     declare readonly toggleButtonTarget: HTMLButtonElement;
     declare readonly hasToggleButtonTarget: boolean;
+    declare readonly sunIconTarget: SVGElement;
+    declare readonly hasSunIconTarget: boolean;
+    declare readonly moonIconTarget: SVGElement;
+    declare readonly hasMoonIconTarget: boolean;
 
     connect() {
         this.applyTheme();
@@ -34,10 +38,23 @@ export default class extends Controller {
             effectiveTheme = "light";
         }
 
-        // Update button text (optional, but good UX)
+        // Update icon visibility: show sun in dark mode (to switch to light), moon in light mode (to switch to dark)
+        if (this.hasSunIconTarget && this.hasMoonIconTarget) {
+            if (effectiveTheme === "dark") {
+                this.sunIconTarget.classList.remove("hidden");
+                this.moonIconTarget.classList.add("hidden");
+            } else {
+                this.sunIconTarget.classList.add("hidden");
+                this.moonIconTarget.classList.remove("hidden");
+            }
+        }
+
+        // Update aria-label for accessibility
         if (this.hasToggleButtonTarget) {
-            this.toggleButtonTarget.textContent =
-                effectiveTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+            this.toggleButtonTarget.setAttribute(
+                "aria-label",
+                effectiveTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            );
         }
     }
 }

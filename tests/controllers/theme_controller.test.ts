@@ -29,7 +29,10 @@ const setupDOM = async (themeInStorage: string | null = null): Promise<Applicati
 
     document.body.innerHTML = `
     <div data-controller="theme">
-      <button data-theme-target="toggleButton" data-action="click->theme#toggle">Toggle</button>
+      <button data-theme-target="toggleButton" data-action="click->theme#toggle" aria-label="Toggle theme">
+        <svg data-theme-target="sunIcon" class="w-5 h-5 hidden" data-testid="sun-icon"></svg>
+        <svg data-theme-target="moonIcon" class="w-5 h-5 hidden" data-testid="moon-icon"></svg>
+      </button>
     </div>
   `;
 
@@ -61,31 +64,41 @@ describe("ThemeController", () => {
     it("should apply dark theme if set in localStorage", async () => {
         application = await setupDOM("dark");
         expect(document.documentElement.classList.contains("dark")).toBe(true);
-        const button = document.querySelector('[data-theme-target="toggleButton"]') as HTMLButtonElement;
-        expect(button.textContent).toBe("Switch to Light Mode");
+        const sunIcon = document.querySelector('[data-testid="sun-icon"]') as SVGElement;
+        const moonIcon = document.querySelector('[data-testid="moon-icon"]') as SVGElement;
+        // Sun icon visible in dark mode (to switch to light)
+        expect(sunIcon.classList.contains("hidden")).toBe(false);
+        expect(moonIcon.classList.contains("hidden")).toBe(true);
     });
 
     it("should apply light theme if set in localStorage", async () => {
         application = await setupDOM("light");
         expect(document.documentElement.classList.contains("dark")).toBe(false);
-        const button = document.querySelector('[data-theme-target="toggleButton"]') as HTMLButtonElement;
-        expect(button.textContent).toBe("Switch to Dark Mode");
+        const sunIcon = document.querySelector('[data-testid="sun-icon"]') as SVGElement;
+        const moonIcon = document.querySelector('[data-testid="moon-icon"]') as SVGElement;
+        // Moon icon visible in light mode (to switch to dark)
+        expect(sunIcon.classList.contains("hidden")).toBe(true);
+        expect(moonIcon.classList.contains("hidden")).toBe(false);
     });
 
     it("should apply dark theme if OS preference is dark and no localStorage theme", async () => {
         mockMatchMedia(true); // Simulate OS dark mode
         application = await setupDOM(null);
         expect(document.documentElement.classList.contains("dark")).toBe(true);
-        const button = document.querySelector('[data-theme-target="toggleButton"]') as HTMLButtonElement;
-        expect(button.textContent).toBe("Switch to Light Mode");
+        const sunIcon = document.querySelector('[data-testid="sun-icon"]') as SVGElement;
+        const moonIcon = document.querySelector('[data-testid="moon-icon"]') as SVGElement;
+        expect(sunIcon.classList.contains("hidden")).toBe(false);
+        expect(moonIcon.classList.contains("hidden")).toBe(true);
     });
 
     it("should apply light theme if OS preference is light and no localStorage theme", async () => {
         mockMatchMedia(false); // Simulate OS light mode
         application = await setupDOM(null);
         expect(document.documentElement.classList.contains("dark")).toBe(false);
-        const button = document.querySelector('[data-theme-target="toggleButton"]') as HTMLButtonElement;
-        expect(button.textContent).toBe("Switch to Dark Mode");
+        const sunIcon = document.querySelector('[data-testid="sun-icon"]') as SVGElement;
+        const moonIcon = document.querySelector('[data-testid="moon-icon"]') as SVGElement;
+        expect(sunIcon.classList.contains("hidden")).toBe(true);
+        expect(moonIcon.classList.contains("hidden")).toBe(false);
     });
 
     it("should toggle from light to dark on click", async () => {
@@ -98,7 +111,10 @@ describe("ThemeController", () => {
 
         expect(document.documentElement.classList.contains("dark")).toBe(true);
         expect(localStorage.getItem("theme")).toBe("dark");
-        expect(button.textContent).toBe("Switch to Light Mode");
+        const sunIcon = document.querySelector('[data-testid="sun-icon"]') as SVGElement;
+        const moonIcon = document.querySelector('[data-testid="moon-icon"]') as SVGElement;
+        expect(sunIcon.classList.contains("hidden")).toBe(false);
+        expect(moonIcon.classList.contains("hidden")).toBe(true);
     });
 
     it("should toggle from dark to light on click", async () => {
@@ -111,7 +127,10 @@ describe("ThemeController", () => {
 
         expect(document.documentElement.classList.contains("dark")).toBe(false);
         expect(localStorage.getItem("theme")).toBe("light");
-        expect(button.textContent).toBe("Switch to Dark Mode");
+        const sunIcon = document.querySelector('[data-testid="sun-icon"]') as SVGElement;
+        const moonIcon = document.querySelector('[data-testid="moon-icon"]') as SVGElement;
+        expect(sunIcon.classList.contains("hidden")).toBe(true);
+        expect(moonIcon.classList.contains("hidden")).toBe(false);
     });
 
     // Add test for OS preference change listener if needed (more complex mocking)

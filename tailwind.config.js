@@ -7,5 +7,5 @@ module.exports = {
             // Remove the backgroundImage extension
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/typography")],
 };
