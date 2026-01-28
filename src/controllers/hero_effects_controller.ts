@@ -87,10 +87,11 @@ export default class HeroEffectsController extends Controller {
             const x = (px - 0.5) * 2; // -1..1
             const y = (py - 0.5) * 2; // -1..1
 
-            // Tilt: move mouse left -> rotateY negative, move up -> rotateX positive
+            // Tilt: keep it mostly „card-like“.
+            // We only tilt on Y here so we don't conflict with the CSS rotateX fold/unfold.
             const maxTilt = 10; // degrees
             this.targetRotateY = x * maxTilt;
-            this.targetRotateX = -y * maxTilt;
+            this.targetRotateX = 0;
 
             // Small parallax translation for depth
             const maxTranslate = 8; // px
@@ -134,8 +135,10 @@ export default class HeroEffectsController extends Controller {
             this.currentTranslateX += (this.targetTranslateX - this.currentTranslateX) * ease;
             this.currentTranslateY += (this.targetTranslateY - this.currentTranslateY) * ease;
 
-            // Apply transform: keep perspective on container, do transforms here
-            el.style.transform = `translate3d(${this.currentTranslateX}px, ${this.currentTranslateY}px, 0) rotateX(${this.currentRotateX}deg) rotateY(${this.currentRotateY}deg)`;
+            // Apply transform in a way that plays nicely with the CSS „fold/unfold“ animation.
+            // We only add a subtle translate + rotateY here.
+            // rotateX is kept at 0 to avoid fighting with the CSS rotateX fold.
+            el.style.transform = `translate3d(${this.currentTranslateX}px, ${this.currentTranslateY}px, 0) rotateY(${this.currentRotateY}deg)`;
 
             this.rafId = requestAnimationFrame(tick);
         };

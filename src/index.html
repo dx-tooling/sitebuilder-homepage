@@ -107,12 +107,18 @@
                 </div>
 
                 <div class="lg:col-span-6">
-                    <div class="relative effects-container" data-controller="hero-effects" style="perspective: 1200px; transform-style: preserve-3d;">
+                    <!--
+                        Hero „Einklapp“-Effekt wie im Styleguide:
+                        - Initial ist die komplette Hero-Card stark nach hinten geklappt (rotateX(60deg) origin-top)
+                        - Beim Aktivieren (IntersectionObserver -> effects-active) klappt sie in Position.
+                        Der zusätzliche Pointer-Tilt kommt aus dem hero-effects Controller.
+                    -->
+                    <div class="relative effects-container" data-controller="hero-effects" style="perspective: 1200px;">
                         <div
                             class="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl
-                                   transition-all duration-[2000ms] ease-out
-                                   transform rotate-x-[10deg] rotate-y-[-8deg] origin-center
-                                   [.effects-active_&]:[transform:rotateX(0deg)_rotateY(0deg)]
+                                   transition-transform duration-[2500ms] ease-in-out
+                                   transform rotate-x-[60deg] origin-top
+                                   [.effects-active_&]:[transform:rotateX(0deg)]
                                    hover:shadow-[0_30px_120px_-35px_rgba(236,72,153,0.55)]"
                             style="transform-style: preserve-3d;"
                         >
