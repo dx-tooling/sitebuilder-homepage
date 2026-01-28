@@ -43,7 +43,10 @@ module.exports = (env, argv) => {
     return {
         // Keep build working even if the marketing site pages are removed.
         // We still want the Styleguide (HTML/CSS) to be buildable.
-        entry: "./src/styles/main.css",
+        entry: {
+            main: "./src/scripts/main.ts",
+            styles: "./src/styles/main.css",
+        },
         mode: isProduction ? "production" : "development",
         devtool: isProduction ? false : "inline-source-map", // Add source maps for dev
         module: {
@@ -131,7 +134,7 @@ module.exports = (env, argv) => {
         },
         output: {
             // Use contenthash for production builds, simple name for development
-            filename: isProduction ? "bundle.[contenthash].js" : "bundle.js",
+            filename: isProduction ? "[name].[contenthash].js" : "[name].js",
             path: path.resolve(__dirname, "dist"),
             clean: true,
             publicPath: "auto",
