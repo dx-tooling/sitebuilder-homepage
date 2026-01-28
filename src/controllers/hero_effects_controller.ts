@@ -69,7 +69,13 @@ export default class HeroEffectsController extends Controller {
     }
 
     private enableParallaxTilt() {
-        const el = this.element as HTMLElement;
+        const containerEl = this.element as HTMLElement;
+        const foldEl = containerEl.querySelector(".hero-fold") as HTMLElement | null;
+
+        // We tilt the whole hero box (the folded element), not just the image.
+        // The fold/unfold rotateX is handled by CSS on .hero-fold.
+        // Here we add a subtle rotateY + translate for depth.
+        const tiltEl = foldEl ?? containerEl;
 
         // Smoothly animate back to neutral on leave
         this.boundOnPointerLeave = () => {
@@ -80,7 +86,7 @@ export default class HeroEffectsController extends Controller {
         };
 
         this.boundOnPointerMove = (e: PointerEvent) => {
-            const rect = el.getBoundingClientRect();
+            const rect = containerEl.getBoundingClientRect();
             const px = (e.clientX - rect.left) / rect.width; // 0..1
             const py = (e.clientY - rect.top) / rect.height; // 0..1
 
@@ -99,33 +105,37 @@ export default class HeroEffectsController extends Controller {
             this.targetTranslateY = y * maxTranslate;
         };
 
-        el.style.willChange = "transform";
-        el.addEventListener("pointermove", this.boundOnPointerMove, { passive: true });
-        el.addEventListener("pointerleave", this.boundOnPointerLeave, { passive: true });
+        tiltEl.style.willChange = "transform";
+        containerEl.addEventListener("pointermove", this.boundOnPointerMove, { passive: true });
+        containerEl.addEventListener("pointerleave", this.boundOnPointerLeave, { passive: true });
 
         // Kick off render loop
-        this.startRaf();
+        this.startRaf(tiltEl);
     }
 
     private disableParallaxTilt() {
-        const el = this.element as HTMLElement;
+        const containerEl = this.element as HTMLElement;
+        const foldEl = containerEl.querySelector(".hero-fold") as HTMLElement | null;
+        const tiltEl = foldEl ?? containerEl;
         if (this.boundOnPointerMove) {
-            el.removeEventListener("pointermove", this.boundOnPointerMove);
+            containerEl.removeEventListener("pointermove", this.boundOnPointerMove);
             this.boundOnPointerMove = null;
         }
         if (this.boundOnPointerLeave) {
-            el.removeEventListener("pointerleave", this.boundOnPointerLeave);
+            containerEl.removeEventListener("pointerleave", this.boundOnPointerLeave);
             this.boundOnPointerLeave = null;
         }
         if (this.rafId !== null) {
             cancelAnimationFrame(this.rafId);
             this.rafId = null;
         }
+
+        // Reset inline transform so CSS can fully control the fold/unfold state.
+        tiltEl.style.transform = "";
     }
 
-    private startRaf() {
+    private startRaf(tiltEl: HTMLElement) {
         if (this.rafId !== null) return;
-        const el = this.element as HTMLElement;
 
         const tick = () => {
             // Ease toward target for a premium feel
@@ -138,7 +148,9 @@ export default class HeroEffectsController extends Controller {
             // Apply transform in a way that plays nicely with the CSS „fold/unfold“ animation.
             // We only add a subtle translate + rotateY here.
             // rotateX is kept at 0 to avoid fighting with the CSS rotateX fold.
-            el.style.transform = `translate3d(${this.currentTranslateX}px, ${this.currentTranslateY}px, 0) rotateY(${this.currentRotateY}deg)`;
+            // Important: we only apply rotateY + translate here. rotateX is left to CSS (.hero-fold)
+            // so the full hero box can "fold" exactly like in the styleguide.
+            tiltEl.style.transform = `translate3d(${this.currentTranslateX}px, ${this.currentTranslateY}px, 0) rotateY(${this.currentRotateY}deg)`;
 
             this.rafId = requestAnimationFrame(tick);
         };

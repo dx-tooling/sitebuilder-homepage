@@ -116,12 +116,14 @@
                     <div class="relative effects-container" data-controller="hero-effects" style="perspective: 1200px;">
                         <div
                             class="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl
-                                   transition-transform duration-[2500ms] ease-in-out
-                                   transform rotate-x-[60deg] origin-top
-                                   [.effects-active_&]:[transform:rotateX(0deg)]
                                    hover:shadow-[0_30px_120px_-35px_rgba(236,72,153,0.55)]"
                             style="transform-style: preserve-3d;"
                         >
+                            <div
+                                class="hero-fold transition-transform duration-[2500ms] ease-in-out
+                                       transform rotate-x-[60deg] origin-top
+                                       [.effects-active_&]:[transform:rotateX(0deg)]"
+                            >
                             <img
                                 src="https://content-assets.joboo.de/demo-assets/friseur-eine-froehliche-friseurin-foent-einer-kundin-die-haare.jpg"
                                 alt="Friseurin stylt einer Kundin die Haare im Salon"
@@ -136,6 +138,7 @@
                                         [.effects-active_&]:[transform:translateZ(0px)]">
                                 <div class="text-sm font-semibold">Farbe, die leuchtet – ohne Kompromisse.</div>
                                 <div class="mt-1 text-xs text-white/75">Balayage • Glossing • Blond Spezialist:innen</div>
+                            </div>
                             </div>
                         </div>
 
