@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
         ignore: ["./src/partials/**/*.html"], // Exclude partials from direct processing by HtmlWebpackPlugin
     });
 
-    // Find all Markdown blog posts
+    // Find all Markdown blog posts (optional)
     const markdownBlogFiles = glob.sync("./src/blog/*.md");
 
     // Create an HtmlWebpackPlugin instance for each HTML file found
@@ -41,7 +41,9 @@ module.exports = (env, argv) => {
     ];
 
     return {
-        entry: "./src/index.ts",
+        // Keep build working even if the marketing site pages are removed.
+        // We still want the Styleguide (HTML/CSS) to be buildable.
+        entry: "./src/styles/main.css",
         mode: isProduction ? "production" : "development",
         devtool: isProduction ? false : "inline-source-map", // Add source maps for dev
         module: {
