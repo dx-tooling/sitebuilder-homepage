@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full scroll-smooth">
+
+<head>
+    <title>Salon LUMINA – Friseur in deiner Stadt</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="Salon LUMINA – Premium Friseur: Balayage, Colorationen, Schnitte, Styling. Online-Termin, transparente Preise und ein Team, das dich strahlen lässt."
+    />
+
+    <include src="partials/theme-fouc-guard.html"></include>
+    <!-- CSS/JS will be injected by HtmlWebpackPlugin -->
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+<!-- Topbar -->
+<header class="sticky top-0 z-40 border-b border-gray-200/70 dark:border-gray-800 bg-white/70 dark:bg-gray-900/60 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-3">
+        <a href="#top" class="flex items-center gap-2 font-extrabold tracking-tight">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-600 to-indigo-700 text-white shadow">
+                L
+            </span>
+            <span class="text-base sm:text-lg">Salon <span class="text-gray-900 dark:text-white">LUMINA</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#services">Leistungen</a>
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#prices">Preise</a>
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#gallery">Galerie</a>
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#team">Team</a>
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#contact">Kontakt</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+            <div data-controller="theme">
+                <button
+                    data-theme-target="toggleButton"
+                    data-action="click->theme#toggle"
+                    aria-label="Theme umschalten"
+                    class="p-2 rounded-md text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white
+                           hover:bg-gray-100 dark:hover:bg-gray-800
+                           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 dark:focus:ring-offset-gray-900
+                           cursor-pointer transition-colors duration-200"
+                >
+                    <svg data-theme-target="sunIcon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+                    <svg data-theme-target="moonIcon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <a
+                class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-md font-semibold text-white
+                       bg-gradient-to-r from-fuchsia-600 to-indigo-700 hover:from-fuchsia-700 hover:to-indigo-800
+                       shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 dark:focus:ring-offset-gray-900 transition"
+                href="#termin"
+            >
+                Termin buchen
+            </a>
+        </div>
+    </div>
+</header>
+
+<main id="top">
+    <!-- Hero (Wow Effect) -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0">
+            <img
+                src="https://content-assets.joboo.de/demo-assets/friseur-fine-art-schwarz-weiss-foto-eines-friseursalons.jpg"
+                alt="Stilvoller Friseursalon in Schwarzweiß"
+                class="h-full w-full object-cover"
+                loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-gray-50 dark:to-gray-900"></div>
+            <div class="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-fuchsia-500/30 blur-3xl"></div>
+            <div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-indigo-500/25 blur-3xl"></div>
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
+            <div
+                class="effects-container"
+                data-controller="hero-effects"
+                style="perspective: 1100px"
+            >
+                <div
+                    class="relative z-10 rounded-2xl border border-white/10 bg-white/10 dark:bg-black/20 backdrop-blur-xl
+                           shadow-[0_40px_120px_-40px_rgb(0_0_0_/_0.8)] p-8 sm:p-12
+                           transition-transform duration-[2800ms] ease-in-out
+                           transform rotate-x-[55deg] origin-top
+                           [.effects-active_&]:[transform:scale(1.02)_rotateX(0deg)]"
+                    style="transform-style: preserve-3d"
+                >
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs sm:text-sm text-white/90"
+                    >
+                        <span class="inline-block h-2 w-2 rounded-full bg-fuchsia-400"></span>
+                        Premium Hair • Color • Balayage • Styling
+                    </p>
+
+                    <h1
+                        class="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.05]
+                               transition-all duration-[2600ms] ease-in-out
+                               [transform:translateZ(40px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        Der Moment,
+                        <span class="bg-gradient-to-r from-fuchsia-300 via-white to-indigo-200 bg-clip-text text-transparent">
+                            in dem du dich neu siehst.
+                        </span>
+                    </h1>
+
+                    <p
+                        class="mt-4 text-base sm:text-lg text-white/90 max-w-2xl leading-relaxed
+                               transition-all duration-[2600ms] ease-in-out
+                               [transform:translateZ(120px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        Salon LUMINA verbindet präzise Schnitte, moderne Colorationen und ein ruhiges Luxuserlebnis.
+                        Für Ergebnisse, die nicht nur gut aussehen – sondern sich nach dir anfühlen.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
+                        <a
+                            href="#termin"
+                            class="inline-flex justify-center px-7 py-3.5 font-bold text-white rounded-md
+                                   bg-gradient-to-r from-fuchsia-600 to-indigo-700 hover:from-fuchsia-700 hover:to-indigo-800
+                                   shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 dark:focus:ring-offset-gray-900
+                                   transition-all duration-[2600ms] ease-in-out
+                                   [transform:translateZ(80px)] [.effects-active_&]:[transform:translateZ(0px)] [.effects-active_&]:[box-shadow:0_30px_70px_-25px_rgb(0_0_0_/_0.75)]"
+                        >
+                            Online Termin sichern
+                        </a>
+                        <a
+                            href="#services"
+                            class="inline-flex justify-center px-7 py-3.5 font-semibold rounded-md text-white
+                                   border border-white/30 bg-white/10 hover:bg-white/15
+                                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/60 dark:focus:ring-offset-gray-900 transition"
+                        >
+                            Leistungen ansehen
+                        </a>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-white/90">
+                        <div class="rounded-xl border border-white/15 bg-black/10 p-4">
+                            <p class="text-sm font-semibold">Balayage & Blond</p>
+                            <p class="text-xs text-white/70 mt-1">Natürlich, weich, high-end.</p>
+                        </div>
+                        <div class="rounded-xl border border-white/15 bg-black/10 p-4">
+                            <p class="text-sm font-semibold">Cut & Finish</p>
+                            <p class="text-xs text-white/70 mt-1">Form, die Wochen hält.</p>
+                        </div>
+                        <div class="rounded-xl border border-white/15 bg-black/10 p-4">
+                            <p class="text-sm font-semibold">Glow Ritual</p>
+                            <p class="text-xs text-white/70 mt-1">Pflege + Head Spa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="mx-auto max-w-6xl px-4 py-16">
+        <div class="max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Leistungen, die man sieht.</h2>
+            <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+                Ob du nur „ein bisschen frischer“ willst oder ein komplettes Signature-Makeover: Wir arbeiten mit
+                Beratung, Technik und Gefühl.
+            </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article class="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+                <img
+                    src="https://content-assets.joboo.de/demo-assets/friseur-einer-frau-werden-die-haare-gewaschen.jpg"
+                    alt="Hair Spa – Haare werden gewaschen"
+                    class="h-44 w-full object-cover"
+                    loading="lazy"
+                />
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold">Glow Ritual (Head Spa)</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Tiefenreinigung, Pflege, Massage – der Reset für Kopfhaut & Haar.</p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-200">
+                        <li class="flex gap-2"><span class="text-fuchsia-600 dark:text-fuchsia-400">•</span> Aroma-Kompressen</li>
+                        <li class="flex gap-2"><span class="text-fuchsia-600 dark:text-fuchsia-400">•</span> Glossing für Glanz</li>
+                        <li class="flex gap-2"><span class="text-fuchsia-600 dark:text-fuchsia-400">•</span> Blowout Finish</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+                <img
+                    src="https://content-assets.joboo.de/demo-assets/friseur-eine-froehliche-friseurin-foent-einer-kundin-die-haare.jpg"
+                    alt="Styling im Salon – Föhnen"
+                    class="h-44 w-full object-cover"
+                    loading="lazy"
+                />
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold">Cut & Finish</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Präzise Schnitte, die deine Gesichtsform unterstreichen – inklusive Styling.</p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-200">
+                        <li class="flex gap-2"><span class="text-indigo-600 dark:text-indigo-400">•</span> Beratung & Formanalyse</li>
+                        <li class="flex gap-2"><span class="text-indigo-600 dark:text-indigo-400">•</span> Signature Blow-Dry</li>
+                        <li class="flex gap-2"><span class="text-indigo-600 dark:text-indigo-400">•</span> Styling-Tipps für zuhause</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+                <img
+                    src="https://content-assets.joboo.de/demo-assets/friseur-haende-mit-friseur-utensilien-ragen-von-unten-ins-bild.jpg"
+                    alt="Friseur Utensilien"
+                    class="h-44 w-full object-cover"
+                    loading="lazy"
+                />
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold">Color & Balayage</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Von soft blond bis vivid: Schonende Technik, die natürlich wirkt.</p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-200">
+                        <li class="flex gap-2"><span class="text-fuchsia-600 dark:text-fuchsia-400">•</span> Balayage / Foilayage</li>
+                        <li class="flex gap-2"><span class="text-fuchsia-600 dark:text-fuchsia-400">•</span> Gloss / Toner</li>
+                        <li class="flex gap-2"><span class="text-fuchsia-600 dark:text-fuchsia-400">•</span> Farbe + Pflegeplan</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Prices -->
+    <section id="prices" class="mx-auto max-w-6xl px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Transparente Preise.</h2>
+                <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Jede Haarreise ist anders. Damit du sofort ein Gefühl bekommst, findest du hier Richtwerte.
+                    Vor Ort bekommst du immer eine klare Empfehlung.
+                </p>
+                <div class="mt-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Inkl. Beratung, Pflege & Styling</p>
+                    <dl class="mt-4 space-y-3">
+                        <div class="flex items-center justify-between gap-4">
+                            <dt class="font-medium">Cut & Finish</dt>
+                            <dd class="font-semibold">ab 59 €</dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <dt class="font-medium">Balayage Signature</dt>
+                            <dd class="font-semibold">ab 189 €</dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <dt class="font-medium">Color + Gloss</dt>
+                            <dd class="font-semibold">ab 119 €</dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <dt class="font-medium">Glow Ritual (Head Spa)</dt>
+                            <dd class="font-semibold">ab 79 €</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="rounded-2xl bg-gradient-to-br from-fuchsia-600 to-indigo-700 p-0.5 shadow-lg">
+                <div id="termin" class="rounded-[15px] bg-white dark:bg-gray-900 p-6 sm:p-8">
+                    <h3 class="text-2xl font-bold">Termin anfragen</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Schnell. Unkompliziert. Wir melden uns mit zwei Vorschlägen.</p>
+
+                    <form class="mt-6 grid grid-cols-1 gap-4">
+                        <label class="text-sm">
+                            <span class="block text-gray-700 dark:text-gray-200 font-medium">Name</span>
+                            <input class="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2" type="text" placeholder="Vorname Nachname" />
+                        </label>
+                        <label class="text-sm">
+                            <span class="block text-gray-700 dark:text-gray-200 font-medium">Telefon oder E-Mail</span>
+                            <input class="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2" type="text" placeholder="z. B. 0176 …" />
+                        </label>
+                        <label class="text-sm">
+                            <span class="block text-gray-700 dark:text-gray-200 font-medium">Wunschleistung</span>
+                            <select class="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2">
+                                <option>Cut & Finish</option>
+                                <option>Balayage Signature</option>
+                                <option>Color + Gloss</option>
+                                <option>Glow Ritual</option>
+                            </select>
+                        </label>
+                        <button
+                            type="button"
+                            class="mt-2 inline-flex justify-center px-6 py-3 font-bold text-white rounded-md
+                                   bg-gradient-to-r from-fuchsia-600 to-indigo-700 hover:from-fuchsia-700 hover:to-indigo-800
+                                   shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 dark:focus:ring-offset-gray-900 transition"
+                        >
+                            Anfrage senden
+                        </button>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            Hinweis: Demo-Formular. Für echte Buchungen kann später ein Tool (z. B. Treatwell) eingebunden werden.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="mx-auto max-w-6xl px-4 py-16">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+            <div class="max-w-2xl">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Tolle Fotos. Echter Vibe.</h2>
+                <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Eine Seite ist nur so gut wie ihre Bilder – deshalb arbeiten wir hier mit starken Motiven.
+                </p>
+            </div>
+            <a
+                href="#contact"
+                class="text-sm font-semibold text-fuchsia-700 dark:text-fuchsia-300 hover:underline"
+            >
+                Standort & Öffnungszeiten →
+            </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <img class="h-44 sm:h-56 w-full object-cover rounded-2xl" loading="lazy" alt="Team im Salon" src="https://content-assets.joboo.de/demo-assets/friseur-drei-frauen-mit-friseurutensilien-lachen-in-die-kamera.jpg" />
+            <img class="h-44 sm:h-56 w-full object-cover rounded-2xl" loading="lazy" alt="Haare waschen" src="https://content-assets.joboo.de/demo-assets/friseur-einer-frau-werden-die-haare-gewaschen-2.jpg" />
+            <img class="h-44 sm:h-56 w-full object-cover rounded-2xl" loading="lazy" alt="Styling" src="https://content-assets.joboo.de/demo-assets/friseur-eine-froehliche-friseurin-foent-einer-kundin-die-haare.jpg" />
+            <img class="h-44 sm:h-56 w-full object-cover rounded-2xl" loading="lazy" alt="Salon" src="https://content-assets.joboo.de/demo-assets/friseur-fine-art-schwarz-weiss-foto-eines-friseursalons.jpg" />
+            <img class="h-44 sm:h-56 w-full object-cover rounded-2xl" loading="lazy" alt="Utensilien" src="https://content-assets.joboo.de/demo-assets/friseur-haende-mit-friseur-utensilien-ragen-von-unten-ins-bild.jpg" />
+            <img class="h-44 sm:h-56 w-full object-cover rounded-2xl" loading="lazy" alt="Hairwash" src="https://content-assets.joboo.de/demo-assets/friseur-einer-frau-werden-die-haare-gewaschen.jpg" />
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="mx-auto max-w-6xl px-4 py-16">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Dein Team für den Glow.</h2>
+        <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
+            Ehrliche Beratung, saubere Technik und ein Auge fürs Detail – das ist unser Ding.
+        </p>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+                <p class="text-sm font-semibold text-fuchsia-700 dark:text-fuchsia-300">Master Stylist</p>
+                <h3 class="mt-1 text-xl font-bold">Mira</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Präzisions-Cuts, Curtain Bangs, Editorial Finish.</p>
+            </div>
+            <div class="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+                <p class="text-sm font-semibold text-indigo-700 dark:text-indigo-300">Color Expert</p>
+                <h3 class="mt-1 text-xl font-bold">Noah</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Balayage, Toner, Blond-Repair – schonend & langlebig.</p>
+            </div>
+            <div class="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+                <p class="text-sm font-semibold text-fuchsia-700 dark:text-fuchsia-300">Care & Rituals</p>
+                <h3 class="mt-1 text-xl font-bold">Lea</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Head Spa, Pflegeberatung & Scalpcare-Routinen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-16">
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-8 sm:p-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight">Besuch uns.</h2>
+                    <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Zentral, ruhig, stilvoll. Komm für den Schnitt – bleib für das Gefühl.
+                    </p>
+                    <div class="mt-6 space-y-3 text-sm">
+                        <p><span class="font-semibold">Adresse:</span> Musterstraße 12, 12345 Musterstadt</p>
+                        <p><span class="font-semibold">Telefon:</span> 0123 / 456789</p>
+                        <p><span class="font-semibold">E-Mail:</span> hallo@salon-lumina.de</p>
+                    </div>
+                    <div class="mt-8 grid grid-cols-2 gap-4 text-sm">
+                        <div class="rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 p-4">
+                            <p class="font-semibold">Öffnungszeiten</p>
+                            <p class="mt-1 text-gray-600 dark:text-gray-300">Di–Fr: 10–19 Uhr</p>
+                            <p class="text-gray-600 dark:text-gray-300">Sa: 10–16 Uhr</p>
+                        </div>
+                        <div class="rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 p-4">
+                            <p class="font-semibold">Parken</p>
+                            <p class="mt-1 text-gray-600 dark:text-gray-300">Parkhaus 2 Min.</p>
+                            <p class="text-gray-600 dark:text-gray-300">ÖPNV: direkt vor der Tür</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
+                    <img
+                        src="../static/images/charlesdeluvio-Lks7vei-eAg-unsplash_1920x1280.jpg"
+                        alt="Salon Interior"
+                        class="h-72 w-full object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-6 bg-white dark:bg-gray-800">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Tipp: Für den maximalen „Wow“ auf Mobilgeräten haben wir die Fotos in starke Kontraste und weiche Farbverläufe eingebettet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="border-t border-gray-200 dark:border-gray-800 py-10">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div>
+            <p class="font-semibold">Salon LUMINA</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">© 2026 • Gemacht für deinen Wow-Moment.</p>
+        </div>
+        <div class="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300">
+            <a class="hover:underline" href="#">Impressum</a>
+            <a class="hover:underline" href="#">Datenschutz</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
+Error: File does not exist: /var/www/public/workspaces/019c0478-e3fa-76f4-8d69-e0e27345494b/src/friseur/index.html
