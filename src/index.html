@@ -70,82 +70,109 @@
                 "
             ></div>
 
-            <div class="relative grid lg:grid-cols-12 gap-10 p-8 md:p-12 lg:p-14 items-center">
-                <div class="lg:col-span-6">
-                    <p class="text-xs tracking-[0.22em] uppercase text-white/70">Schnitt • Farbe • Styling</p>
-                    <h1 class="mt-3 text-4xl md:text-5xl font-black leading-tight tracking-tight">
-                        Deine neue Signatur.
-                        <span class="block text-white/85">Professionell. Zeitlos. Modern.</span>
-                    </h1>
-                    <p class="mt-5 text-base md:text-lg text-white/80 max-w-prose">
-                        Willkommen im <span class="font-semibold text-white">Salon Éclat</span> – ein Ort für präzise Cuts, strahlende Farben und Styling, das sich nach <em>dir</em> anfühlt.
-                    </p>
-
-                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                        <a href="#kontakt" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold bg-white text-neutral-900 hover:bg-white/90 transition">
-                            Termin anfragen
-                        </a>
-                        <a href="#galerie" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold border border-white/25 text-white hover:bg-white/10 transition">
-                            Galerie ansehen
-                        </a>
-                    </div>
-
-                    <div class="mt-10 grid grid-cols-3 gap-4 max-w-md">
-                        <div class="rounded-2xl bg-white/8 border border-white/10 p-4">
-                            <div class="text-2xl font-extrabold">4,9</div>
-                            <div class="text-xs text-white/70">Google Bewertung</div>
-                        </div>
-                        <div class="rounded-2xl bg-white/8 border border-white/10 p-4">
-                            <div class="text-2xl font-extrabold">30min</div>
-                            <div class="text-xs text-white/70">Express Styling</div>
-                        </div>
-                        <div class="rounded-2xl bg-white/8 border border-white/10 p-4">
-                            <div class="text-2xl font-extrabold">100%</div>
-                            <div class="text-xs text-white/70">Typberatung</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6">
-                    <!--
-                        Hero „Einklapp“-Effekt wie im Styleguide:
-                        - Initial ist die komplette Hero-Card stark nach hinten geklappt (rotateX(60deg) origin-top)
-                        - Beim Aktivieren (IntersectionObserver -> effects-active) klappt sie in Position.
-                        Der zusätzliche Pointer-Tilt kommt aus dem hero-effects Controller.
-                    -->
-                    <div class="relative effects-container" data-controller="hero-effects" style="perspective: 1200px;">
+            <div class="relative">
+                <!--
+                    STYLEGUIDE-3D-HERO (Multi-Layer):
+                    - Die komplette Hero-Box (Text + Bild) klappt in 3D auf.
+                    - Mehrere Layer (Headlines/CTA/Stats/Bild-Caption) liegen via translateZ im Raum
+                      und „rotieren“ dadurch sichtbar mit – wie im Styleguide.
+                -->
+                <section class="relative lg:col-span-12 effects-container" data-controller="hero-effects" style="perspective: 1200px;">
+                    <div
+                        class="relative z-10 grid lg:grid-cols-12 gap-10 p-8 md:p-12 lg:p-14 items-center
+                               rounded-3xl overflow-hidden border border-black/10 dark:border-white/10
+                               bg-neutral-900 text-white shadow-2xl
+                               transition-transform duration-[3000ms] ease-in-out
+                               transform rotate-x-[60deg] origin-top
+                               [.effects-active_&]:[transform:scale(1.01)_rotateX(0deg)]"
+                        style="transform-style: preserve-3d;"
+                    >
                         <div
-                            class="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl
-                                   hover:shadow-[0_30px_120px_-35px_rgba(236,72,153,0.55)]"
-                            style="transform-style: preserve-3d;"
-                        >
-                            <div
-                                class="hero-fold transition-transform duration-[2500ms] ease-in-out
-                                       transform rotate-x-[60deg] origin-top
-                                       [.effects-active_&]:[transform:rotateX(0deg)]"
-                            >
-                            <img
-                                src="https://content-assets.joboo.de/demo-assets/friseur-eine-froehliche-friseurin-foent-einer-kundin-die-haare.jpg"
-                                alt="Friseurin stylt einer Kundin die Haare im Salon"
-                                class="h-[420px] md:h-[520px] w-full object-cover scale-[1.02]"
-                                loading="eager"
-                                decoding="async"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
+                            class="absolute inset-0 opacity-90"
+                            style="background-image:
+                                radial-gradient(1000px 450px at 15% 15%, rgba(245,158,11,.35), transparent 55%),
+                                radial-gradient(900px 420px at 85% 25%, rgba(236,72,153,.30), transparent 60%),
+                                radial-gradient(800px 420px at 55% 85%, rgba(59,130,246,.22), transparent 55%);
+                            "
+                        ></div>
 
-                            <div class="absolute left-5 bottom-5 right-5 rounded-2xl bg-black/35 backdrop-blur-md border border-white/10 p-5
-                                        transition-all duration-[1600ms] ease-out [transform:translateZ(18px)]
-                                        [.effects-active_&]:[transform:translateZ(0px)]">
-                                <div class="text-sm font-semibold">Farbe, die leuchtet – ohne Kompromisse.</div>
-                                <div class="mt-1 text-xs text-white/75">Balayage • Glossing • Blond Spezialist:innen</div>
+                        <div class="relative lg:col-span-6">
+                            <p class="text-xs tracking-[0.22em] uppercase text-white/70">Schnitt • Farbe • Styling</p>
+                            <h1
+                                class="mt-3 text-4xl md:text-5xl font-black leading-tight tracking-tight transition-all duration-[2500ms] ease-in-out
+                                       [transform:translateZ(60px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                            >
+                                Deine neue Signatur.
+                                <span class="block text-white/85">Professionell. Zeitlos. Modern.</span>
+                            </h1>
+                            <p
+                                class="mt-5 text-base md:text-lg text-white/80 max-w-prose transition-all duration-[2500ms] ease-in-out
+                                       [transform:translateZ(90px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                            >
+                                Willkommen im <span class="font-semibold text-white">Salon Éclat</span> – ein Ort für präzise Cuts, strahlende Farben und Styling, das sich nach <em>dir</em> anfühlt.
+                            </p>
+
+                            <div
+                                class="mt-8 flex flex-col sm:flex-row gap-3 transition-all duration-[2500ms] ease-in-out
+                                       [transform:translateZ(70px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                            >
+                                <a href="#kontakt" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold bg-white text-neutral-900 hover:bg-white/90 transition">
+                                    Termin anfragen
+                                </a>
+                                <a href="#galerie" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold border border-white/25 text-white hover:bg-white/10 transition">
+                                    Galerie ansehen
+                                </a>
                             </div>
+
+                            <div
+                                class="mt-10 grid grid-cols-3 gap-4 max-w-md transition-all duration-[2500ms] ease-in-out
+                                       [transform:translateZ(40px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                            >
+                                <div class="rounded-2xl bg-white/8 border border-white/10 p-4">
+                                    <div class="text-2xl font-extrabold">4,9</div>
+                                    <div class="text-xs text-white/70">Google Bewertung</div>
+                                </div>
+                                <div class="rounded-2xl bg-white/8 border border-white/10 p-4">
+                                    <div class="text-2xl font-extrabold">30min</div>
+                                    <div class="text-xs text-white/70">Express Styling</div>
+                                </div>
+                                <div class="rounded-2xl bg-white/8 border border-white/10 p-4">
+                                    <div class="text-2xl font-extrabold">100%</div>
+                                    <div class="text-xs text-white/70">Typberatung</div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="pointer-events-none absolute -top-6 -right-6 h-40 w-40 rounded-full bg-pink-500/25 blur-2xl"></div>
-                        <div class="pointer-events-none absolute -bottom-8 -left-8 h-44 w-44 rounded-full bg-amber-400/25 blur-2xl"></div>
+                        <div class="relative lg:col-span-6">
+                            <div
+                                class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-[2500ms] ease-in-out
+                                       [transform:translateZ(30px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                                style="transform-style: preserve-3d;"
+                            >
+                                <img
+                                    src="https://content-assets.joboo.de/demo-assets/friseur-eine-froehliche-friseurin-foent-einer-kundin-die-haare.jpg"
+                                    alt="Friseurin stylt einer Kundin die Haare im Salon"
+                                    class="h-[420px] md:h-[520px] w-full object-cover scale-[1.02]"
+                                    loading="eager"
+                                    decoding="async"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
+
+                                <div
+                                    class="absolute left-5 bottom-5 right-5 rounded-2xl bg-black/35 backdrop-blur-md border border-white/10 p-5
+                                           transition-all duration-[2500ms] ease-in-out
+                                           [transform:translateZ(110px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                                >
+                                    <div class="text-sm font-semibold">Farbe, die leuchtet – ohne Kompromisse.</div>
+                                    <div class="mt-1 text-xs text-white/75">Balayage • Glossing • Blond Spezialist:innen</div>
+                                </div>
+                            </div>
+
+                            <div class="pointer-events-none absolute -top-6 -right-6 h-40 w-40 rounded-full bg-pink-500/25 blur-2xl"></div>
+                            <div class="pointer-events-none absolute -bottom-8 -left-8 h-44 w-44 rounded-full bg-amber-400/25 blur-2xl"></div>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </section>

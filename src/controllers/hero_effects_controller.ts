@@ -70,12 +70,12 @@ export default class HeroEffectsController extends Controller {
 
     private enableParallaxTilt() {
         const containerEl = this.element as HTMLElement;
-        const foldEl = containerEl.querySelector(".hero-fold") as HTMLElement | null;
 
-        // We tilt the whole hero box (the folded element), not just the image.
-        // The fold/unfold rotateX is handled by CSS on .hero-fold.
-        // Here we add a subtle rotateY + translate for depth.
-        const tiltEl = foldEl ?? containerEl;
+        // In the styleguide, the "fold" is the whole card (the direct child with transform-style:preserve-3d)
+        // and many internal layers use translateZ. We therefore apply the pointer-tilt on that whole card.
+        // If we can't find it, we fall back to the container.
+        const tiltEl =
+            (containerEl.querySelector("[style*='transform-style: preserve-3d']") as HTMLElement | null) ?? containerEl;
 
         // Smoothly animate back to neutral on leave
         this.boundOnPointerLeave = () => {
@@ -115,8 +115,8 @@ export default class HeroEffectsController extends Controller {
 
     private disableParallaxTilt() {
         const containerEl = this.element as HTMLElement;
-        const foldEl = containerEl.querySelector(".hero-fold") as HTMLElement | null;
-        const tiltEl = foldEl ?? containerEl;
+        const tiltEl =
+            (containerEl.querySelector("[style*='transform-style: preserve-3d']") as HTMLElement | null) ?? containerEl;
         if (this.boundOnPointerMove) {
             containerEl.removeEventListener("pointermove", this.boundOnPointerMove);
             this.boundOnPointerMove = null;
