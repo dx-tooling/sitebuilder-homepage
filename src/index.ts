@@ -17,4 +17,8 @@ declare global {
 }
 window.Stimulus = application;
 
-console.log("Stimulus application started.");
+// Small global helpers
+document.addEventListener("DOMContentLoaded", () => {
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+});
