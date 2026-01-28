@@ -13,6 +13,10 @@ export default function blogPostsPlugin() {
 
         // Read all blog post files
         try {
+            // If the blog folder was removed, skip silently.
+            if (!fs.existsSync(blogDir)) {
+                return tree;
+            }
             const files = fs.readdirSync(blogDir);
 
             files.forEach((file) => {

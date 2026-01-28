@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
         ignore: ["./src/partials/**/*.html"], // Exclude partials from direct processing by HtmlWebpackPlugin
     });
 
-    // Find all Markdown blog posts
+    // Find all Markdown blog posts (optional folder)
     const markdownBlogFiles = glob.sync("./src/blog/*.md");
 
     // Create an HtmlWebpackPlugin instance for each HTML file found
@@ -30,6 +30,7 @@ module.exports = (env, argv) => {
             });
         }),
         // Markdown blog posts → generate blog/<name>.html
+        // (When no blog posts exist, this simply adds nothing.)
         ...markdownBlogFiles.map((file) => {
             const base = path.basename(file, path.extname(file));
             return new HtmlWebpackPlugin({
