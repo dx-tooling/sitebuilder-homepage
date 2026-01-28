@@ -91,6 +91,22 @@ describe("HeroEffectsController", () => {
         mockUnobserve.mockClear();
         mockDisconnect.mockClear();
         vi.clearAllMocks();
+
+        // Prevent new pointer/RAF logic from running in tests
+        Object.defineProperty(window, "matchMedia", {
+            writable: true,
+            configurable: true,
+            value: vi.fn().mockImplementation(() => ({
+                matches: true, // prefers-reduced-motion: reduce
+                media: "(prefers-reduced-motion: reduce)",
+                onchange: null,
+                addListener: vi.fn(),
+                removeListener: vi.fn(),
+                addEventListener: vi.fn(),
+                removeEventListener: vi.fn(),
+                dispatchEvent: vi.fn(),
+            })),
+        });
     });
 
     afterEach(async () => {
