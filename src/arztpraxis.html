@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full scroll-smooth">
+
+<head>
+    <title>Arztpraxis Sonnenhof – Moderne Medizin mit Zeit für Menschen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="Arztpraxis Sonnenhof: Hausärztliche Versorgung, Vorsorge und Diagnostik – mit Online-Termin und kurzen Wartezeiten." />
+
+    <!-- Include FOUC guard script -->
+    <include src="partials/theme-fouc-guard.html"></include>
+
+    <!-- CSS will be injected by HtmlWebpackPlugin -->
+</head>
+
+<body class="h-full bg-gray-50 text-gray-900 transition-colors duration-200">
+    <!-- Topbar -->
+    <header class="sticky top-0 z-40 border-b border-gray-200/70 bg-white/80 backdrop-blur">
+        <div class="container mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
+            <a href="#top" class="flex items-center gap-2 font-semibold text-gray-900">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+                    <span class="text-sm font-bold">AS</span>
+                </span>
+                <span class="leading-tight">
+                    Arztpraxis <span class="font-extrabold">Sonnenhof</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+                <a class="hover:text-gray-900" href="#leistungen">Leistungen</a>
+                <a class="hover:text-gray-900" href="#team">Team</a>
+                <a class="hover:text-gray-900" href="#ablauf">Ablauf</a>
+                <a class="hover:text-gray-900" href="#kontakt">Kontakt</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a
+                    href="#termin"
+                    class="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold text-white
+                           bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800
+                           shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+                >Online-Termin</a>
+                <a
+                    href="tel:+491234567890"
+                    class="hidden sm:inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium
+                           text-gray-700 bg-white border border-gray-300 shadow-sm hover:bg-gray-50 transition"
+                >Anrufen</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- Hero with effect -->
+        <section class="relative overflow-hidden">
+            <!-- Decorative background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
+            <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl"></div>
+            <div class="absolute -bottom-28 -left-28 h-80 w-80 rounded-full bg-indigo-200/40 blur-3xl"></div>
+
+            <section
+                class="relative container mx-auto max-w-6xl px-4 py-16 md:py-20 text-center effects-container"
+                data-controller="hero-effects"
+                style="perspective: 1000px;"
+            >
+                <div
+                    class="relative z-10 rounded-2xl border border-gray-200/70 bg-white/70 backdrop-blur p-8 md:p-12 shadow-sm
+                           transition-transform duration-[2200ms] ease-in-out
+                           transform rotate-x-[55deg] origin-top
+                           [.effects-active_&]:[transform:scale(1.02)_rotateX(0deg)]"
+                    style="transform-style: preserve-3d;"
+                >
+                    <p
+                        class="mx-auto inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5
+                               text-xs font-semibold text-blue-800"
+                    >
+                        <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+                        Akuttermine täglich · Online-Termin · Moderne Diagnostik
+                    </p>
+
+                    <h1
+                        class="mt-6 text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 transition-all duration-[2200ms] ease-in-out
+                               [transform:translateZ(40px)] [.effects-active_&]:[transform:translateZ(0px)]
+                               [.effects-active_&]:[filter:drop-shadow(0_10px_8px_rgb(0_0_0_/_0.18))]"
+                    >
+                        Ihre Gesundheit –
+                        <span class="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">klar, empathisch, zuverlässig</span>
+                    </h1>
+
+                    <p
+                        class="mt-5 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed transition-all duration-[2200ms] ease-in-out
+                               [transform:translateZ(120px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        In der Arztpraxis Sonnenhof verbinden wir moderne Medizin mit Zeit für Menschen: kurze Wege, verständliche Diagnostik
+                        und ein Team, das Sie ernst nimmt.
+                    </p>
+
+                    <div
+                        class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 transition-all duration-[2200ms] ease-in-out
+                               [transform:translateZ(80px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        <a
+                            id="termin"
+                            href="#kontakt"
+                            class="inline-flex w-full sm:w-auto items-center justify-center rounded-md px-8 py-4 text-lg font-bold text-white
+                                   bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800
+                                   shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+                        >Termin vereinbaren</a>
+                        <a
+                            href="#leistungen"
+                            class="inline-flex w-full sm:w-auto items-center justify-center rounded-md px-8 py-4 text-lg font-semibold
+                                   text-gray-700 bg-white border border-gray-300 shadow-sm hover:bg-gray-50 transition"
+                        >Leistungen ansehen</a>
+                    </div>
+
+                    <div
+                        class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 text-left transition-all duration-[2200ms] ease-in-out
+                               [transform:translateZ(40px)] [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        <div class="rounded-xl bg-white border border-gray-200/70 p-5">
+                            <p class="text-sm font-semibold text-gray-900">Schnell & planbar</p>
+                            <p class="mt-1 text-sm text-gray-600">Online-Termine, Akutsprechstunde und digitale Folgerezepte.</p>
+                        </div>
+                        <div class="rounded-xl bg-white border border-gray-200/70 p-5">
+                            <p class="text-sm font-semibold text-gray-900">Ganzheitliche Hausarztmedizin</p>
+                            <p class="mt-1 text-sm text-gray-600">Vorsorge, Chronikerprogramme, Impfungen und Check-ups.</p>
+                        </div>
+                        <div class="rounded-xl bg-white border border-gray-200/70 p-5">
+                            <p class="text-sm font-semibold text-gray-900">Zentral & barrierearm</p>
+                            <p class="mt-1 text-sm text-gray-600">Gute Anbindung, Aufzug, kinderfreundlich – auch für Senior:innen.</p>
+                        </div>
+                    </div>
+
+                    <p class="mt-6 text-xs text-gray-500">
+                        Hinweis: Diese Seite ist ein Beispiel. Medizinische Entscheidungen bitte immer mit Ärzt:innen besprechen.
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Leistungen -->
+        <section id="leistungen" class="container mx-auto max-w-6xl px-4 py-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Leistungen, die wirklich helfen</h2>
+                <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
+                    Vom ersten Symptom bis zur langfristigen Begleitung: Wir bieten eine strukturierte, verständliche Versorgung –
+                    und erklären, was wir tun.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold">Akutsprechstunde</h3>
+                    <p class="mt-2 text-sm text-gray-600">Schnelle Abklärung bei Infekten, Schmerzen, Verletzungen & Unwohlsein.</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold">Vorsorge & Check-ups</h3>
+                    <p class="mt-2 text-sm text-gray-600">Individuelle Prävention: Blutdruck, Labor, EKG – abgestimmt auf Ihre Situation.</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold">Impfungen</h3>
+                    <p class="mt-2 text-sm text-gray-600">Reise- und Standardimpfungen – mit Impfberatung und Erinnerungsservice.</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold">Chronikerprogramme</h3>
+                    <p class="mt-2 text-sm text-gray-600">Kontinuierliche Betreuung bei Diabetes, Hypertonie, Asthma/COPD u. a.</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold">Diagnostik</h3>
+                    <p class="mt-2 text-sm text-gray-600">EKG, Spirometrie, Labor – schnell, nachvollziehbar, transparent erklärt.</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold">Atteste & Formulare</h3>
+                    <p class="mt-2 text-sm text-gray-600">Zuverlässig, datenschutzkonform und mit klaren Abläufen für kurze Wege.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="bg-gray-100/60 border-y border-gray-200/70">
+            <div class="container mx-auto max-w-6xl px-4 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Ein Team, das zuhört</h2>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Medizin ist Vertrauenssache. Darum arbeiten wir mit klaren Prozessen, aber ohne Hektik:
+                            Wir nehmen uns Zeit für Anamnese, erklären Befunde verständlich und entscheiden gemeinsam.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-gray-700">
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>Empathische Kommunikation & einfache Sprache</li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>Koordination von Facharzt-Überweisungen</li>
+                            <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>Transparente Empfehlungen statt unnötiger Maßnahmen</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                            <p class="text-sm font-semibold text-gray-900">Dr. med. Anna Beispiel</p>
+                            <p class="mt-1 text-sm text-gray-600">Fachärztin für Allgemeinmedizin</p>
+                            <p class="mt-4 text-xs text-gray-500">Schwerpunkte: Vorsorge, Innere Medizin</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                            <p class="text-sm font-semibold text-gray-900">Dr. med. Jonas Muster</p>
+                            <p class="mt-1 text-sm text-gray-600">Facharzt für Innere Medizin</p>
+                            <p class="mt-4 text-xs text-gray-500">Schwerpunkte: Chronikerprogramme, Diagnostik</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                            <p class="text-sm font-semibold text-gray-900">MFA-Team</p>
+                            <p class="mt-1 text-sm text-gray-600">Organisation, Labor, Telefon, Impfen</p>
+                            <p class="mt-4 text-xs text-gray-500">Schnelle Abläufe, freundliche Betreuung</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-200/70 p-6 shadow-sm">
+                            <p class="text-sm font-semibold text-gray-900">Digital & vor Ort</p>
+                            <p class="mt-1 text-sm text-gray-600">Online-Termine & Erinnerungen</p>
+                            <p class="mt-4 text-xs text-gray-500">Datenschutzkonform und einfach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ablauf -->
+        <section id="ablauf" class="container mx-auto max-w-6xl px-4 py-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">So läuft Ihr Termin ab</h2>
+                <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Ein klarer Prozess sorgt für Ruhe – und Sie wissen, was Sie erwartet.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-xl bg-white border border-gray-200/70 p-6 shadow-sm">
+                    <p class="text-xs font-semibold text-blue-700">Schritt 1</p>
+                    <h3 class="mt-2 text-lg font-semibold">Termin & Anliegen</h3>
+                    <p class="mt-2 text-sm text-gray-600">Online oder telefonisch. Sie nennen kurz den Grund – wir planen passend.</p>
+                </div>
+                <div class="rounded-xl bg-white border border-gray-200/70 p-6 shadow-sm">
+                    <p class="text-xs font-semibold text-blue-700">Schritt 2</p>
+                    <h3 class="mt-2 text-lg font-semibold">Diagnostik & Gespräch</h3>
+                    <p class="mt-2 text-sm text-gray-600">Wir hören zu, untersuchen zielgerichtet und erklären Optionen verständlich.</p>
+                </div>
+                <div class="rounded-xl bg-white border border-gray-200/70 p-6 shadow-sm">
+                    <p class="text-xs font-semibold text-blue-700">Schritt 3</p>
+                    <h3 class="mt-2 text-lg font-semibold">Plan & Nachsorge</h3>
+                    <p class="mt-2 text-sm text-gray-600">Klare nächste Schritte: Therapie, Verlaufskontrolle oder Überweisung.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt / CTA -->
+        <section id="kontakt" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+            <div class="container mx-auto max-w-6xl px-4 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold">Jetzt Termin anfragen</h2>
+                        <p class="mt-4 text-blue-100 leading-relaxed">
+                            Schreiben Sie uns kurz Ihr Anliegen. Wir melden uns zeitnah mit einem Terminvorschlag.
+                            Für Notfälle wählen Sie bitte den Notruf (112).
+                        </p>
+
+                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-5">
+                                <p class="font-semibold">Adresse</p>
+                                <p class="mt-1 text-blue-100">Sonnenhofstraße 12, 12345 Musterstadt</p>
+                            </div>
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-5">
+                                <p class="font-semibold">Telefon</p>
+                                <p class="mt-1 text-blue-100"><a class="underline" href="tel:+491234567890">+49 123 4567890</a></p>
+                            </div>
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-5">
+                                <p class="font-semibold">Sprechzeiten</p>
+                                <p class="mt-1 text-blue-100">Mo–Fr 08:00–12:00 · Di/Do 14:00–18:00</p>
+                            </div>
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-5">
+                                <p class="font-semibold">Anfahrt</p>
+                                <p class="mt-1 text-blue-100">ÖPNV: Linie 3 · Parken: Innenhof</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white p-6 md:p-8 text-gray-900 shadow-xl">
+                        <h3 class="text-xl font-bold">Kontaktformular</h3>
+                        <p class="mt-2 text-sm text-gray-600">Für Terminanfragen und organisatorische Anliegen (keine Notfälle).</p>
+
+                        <form class="mt-6 space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1" for="name">Name</label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    placeholder="Vor- und Nachname"
+                                    class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1" for="phone">Telefon</label>
+                                    <input
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        autocomplete="tel"
+                                        placeholder="z. B. 0151 12345678"
+                                        class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1" for="email">E-Mail</label>
+                                    <input
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        autocomplete="email"
+                                        placeholder="name@beispiel.de"
+                                        class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1" for="reason">Anliegen</label>
+                                <select
+                                    id="reason"
+                                    name="reason"
+                                    class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                >
+                                    <option>Terminanfrage</option>
+                                    <option>Rezept / Überweisung</option>
+                                    <option>Impfung</option>
+                                    <option>Sonstiges</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1" for="message">Nachricht</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="Worum geht es? (Bitte keine sensiblen Diagnosen über das Formular senden.)"
+                                    class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                ></textarea>
+                                <p class="mt-2 text-xs text-gray-500">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Kontaktaufnahme zu.</p>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-bold text-white
+                                       bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800
+                                       shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+                            >Absenden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 border-t border-gray-200">
+        <div class="container mx-auto max-w-6xl px-4 py-10 text-sm text-gray-600">
+            <div class="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+                <p>&copy; 2026 Arztpraxis Sonnenhof. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-4">
+                    <a class="hover:underline" href="#">Impressum</a>
+                    <a class="hover:underline" href="#">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script will be injected by HtmlWebpackPlugin -->
+</body>
+
+</html>
+Error: File does not exist: /var/www/public/workspaces/019c0478-e3fa-76f4-8d69-e0e27345494b/src/arztpraxis.html
