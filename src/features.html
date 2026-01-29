@@ -64,6 +64,7 @@
         <div class="flex flex-wrap gap-2">
             <a href="#project-management" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Project Management</a>
             <a href="#content-editing" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Content Editing</a>
+            <a href="#remote-content-assets" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Remote Content Assets</a>
             <a href="#workspace-management" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Workspace Management</a>
             <a href="#github-integration" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">GitHub Integration</a>
             <a href="#review-workflow" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Review Workflow</a>
@@ -71,6 +72,7 @@
             <a href="#agent-configuration" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Agent Configuration</a>
             <a href="#security" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Security</a>
             <a href="#ui-ux" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">UI/UX</a>
+            <a href="#internationalization" class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Internationalization</a>
         </div>
     </nav>
 
@@ -196,6 +198,57 @@
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
                 <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Smart Commit Messages</h3>
                 <p class="text-sm text-gray-600 dark:text-gray-400">The agent suggests descriptive commit messages that reflect actual changes, in the language you're chatting in.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Prompt Suggestions</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Clickable prompt suggestions from your project configuration. Hover to expand, click to insert at cursor position.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remote Content Assets Section -->
+    <section class="mb-16" id="remote-content-assets">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-orange-600 dark:text-orange-300" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Remote Content Assets</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Remote Asset Manifest</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Configure external asset manifest URLs per project. Reference images and media from centralized asset repositories.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Asset Browser UI</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Collapsible browser panel displays all available remote assets. Search and filter to find what you need quickly.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Image Previews</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Visual thumbnails for image assets in the browser. See what you're selecting before inserting into content.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Click-to-Insert</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Select an asset and click to insert its URL directly into your chat message or instruction.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">S3 Asset Upload</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Upload new images directly to S3 from the editing interface. Supports IAM role assumption for secure access.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Drag-and-Drop Upload</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Drop images directly into the upload area. Responsive side-by-side layout on wider screens.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Asset Search Filter</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Filter assets by filename or path. Regex-powered search for advanced filtering needs.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Agent Asset Tools</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">The AI agent can list, search, and get info about remote assets to help with content editing tasks.</p>
             </div>
         </div>
     </section>
@@ -425,6 +478,10 @@
                 <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Collapsible Advanced Section</h3>
                 <p class="text-sm text-gray-600 dark:text-gray-400">Agent configuration lives in a collapsible "Advanced" section. Quick setup stays simple; power users can customize.</p>
             </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Workspace Rules Tool</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Place markdown files in .sitebuilder/rules/ to give the agent project-specific conventions and guidelines.</p>
+            </div>
         </div>
     </section>
 
@@ -518,6 +575,41 @@
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
                 <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Error Pages</h3>
                 <p class="text-sm text-gray-600 dark:text-gray-400">Dedicated error pages with recovery options. Clear explanations of what went wrong and how to fix it.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Workflow Documentation</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Public /workflow-docs page with interactive Mermaid diagrams showing workspace lifecycle states and transitions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internationalization Section -->
+    <section class="mb-16" id="internationalization">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-teal-100 dark:bg-teal-900 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-teal-600 dark:text-teal-300" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Internationalization</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Multi-Language Support</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Full English and German locale support with ~160 translation keys across all templates and UI components.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Locale-Prefixed Routing</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Clean URL structure with /en/ and /de/ prefixes. Automatic locale detection and seamless navigation.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Language Switcher</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Toggle between languages from anywhere in the application. Your language preference persists across sessions.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">Localized Templates</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">All 14 application templates fully translated. Consistent experience regardless of language selection.</p>
             </div>
         </div>
     </section>
