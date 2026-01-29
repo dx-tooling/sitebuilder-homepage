@@ -2,7 +2,7 @@
 title: "Internationalization: SiteBuilder Now Speaks Your Language"
 description: "Full i18n support with English and German locales, locale-prefixed routing, and a language switcher throughout the application."
 author: "Manuel Kießling"
-published_time: "2026-01-29T14:00:00+00:00"
+published_time: "2026-01-29T10:00:00+00:00"
 tags: [SiteBuilder, Features, i18n, Localization]
 readTime: "3 min read"
 ---

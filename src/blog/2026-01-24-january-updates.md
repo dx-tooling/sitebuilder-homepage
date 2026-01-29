@@ -2,7 +2,7 @@
 title: "January 2026 Updates: BYOK, Custom Agents, and More"
 description: "This month's SiteBuilder updates bring user-controlled API keys, customizable agent behavior, real-time activity indicators, and improved project management."
 author: "Manuel Kießling"
-published_time: "2026-01-26T10:00:00+00:00"
+published_time: "2026-01-24T10:00:00+00:00"
 tags: [SiteBuilder, Features, BYOK, UX]
 readTime: "4 min read"
 ---

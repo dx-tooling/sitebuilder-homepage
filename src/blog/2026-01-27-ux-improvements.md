@@ -2,7 +2,7 @@
 title: "UX Improvements: Conversation History and Reviewer Dashboard"
 description: "View finished conversations, access PR links directly from the reviews page, and enjoy faster project loading with cached PR URLs."
 author: "Manuel Kießling"
-published_time: "2026-01-26T15:00:00+00:00"
+published_time: "2026-01-27T10:00:00+00:00"
 tags: [SiteBuilder, UX, Performance, Reviews]
 readTime: "2 min read"
 ---

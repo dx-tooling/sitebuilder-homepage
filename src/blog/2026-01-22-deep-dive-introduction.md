@@ -2,7 +2,7 @@
 title: "Deep Dive: Introducing SiteBuilder"
 description: "A detailed introduction covering the problem SiteBuilder solves, how it works, and the architecture behind it."
 author: "DX·Tooling"
-published_time: "2026-01-25T14:00:00+00:00"
+published_time: "2026-01-22T10:00:00+00:00"
 tags: [SiteBuilder, Introduction, Architecture]
 readTime: "1 min read"
 ---

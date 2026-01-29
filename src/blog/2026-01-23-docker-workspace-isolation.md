@@ -2,7 +2,7 @@
 title: "Strong Workspace Isolation with Docker Containers"
 description: "SiteBuilder now executes all agent commands in isolated Docker containers, providing filesystem and process isolation between workspaces for enhanced security."
 author: "Manuel Kießling"
-published_time: "2026-01-25T10:00:00+00:00"
+published_time: "2026-01-23T10:00:00+00:00"
 tags: [SiteBuilder, Docker, Security, Infrastructure]
 readTime: "3 min read"
 ---

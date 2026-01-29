@@ -2,7 +2,7 @@
 title: "Remote Content Assets: Manage Images from External Sources"
 description: "SiteBuilder now supports remote asset manifests, a visual browser, S3 uploads, and agent tools for discovering and inserting images into your content."
 author: "Manuel Kießling"
-published_time: "2026-01-29T10:00:00+00:00"
+published_time: "2026-01-28T10:00:00+00:00"
 tags: [SiteBuilder, Features, Assets, S3]
 readTime: "4 min read"
 ---

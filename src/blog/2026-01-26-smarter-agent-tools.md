@@ -2,7 +2,7 @@
 title: "Smarter Agent Tools: Better Commits and Preview Links"
 description: "The SiteBuilder editor agent now suggests meaningful commit messages and shares live preview URLs, making the editing experience more transparent."
 author: "Manuel Kießling"
-published_time: "2026-01-26T14:00:00+00:00"
+published_time: "2026-01-26T10:00:00+00:00"
 tags: [SiteBuilder, Agent, Tools, DX]
 readTime: "3 min read"
 ---
