@@ -39,6 +39,8 @@ When you ask the agent to "add a hero image," it can browse your asset library a
 
 # Asset Browser UI
 
+![SiteBuilder Content editor with Remote Assets sidebar and prompt suggestions](https://dx-tooling.org/sitebuilder-assets/webapp-screenshots/web-versions/SiteBuilder-content-editor-with-remote-assets-sidebar-and-prompt-suggestions-1600x1292.png)
+
 The editing interface now includes a collapsible asset browser panel. When expanded, you see:
 
 - **Image previews** — Visual thumbnails so you can see what you're selecting

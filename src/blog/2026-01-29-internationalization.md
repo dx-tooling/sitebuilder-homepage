@@ -9,6 +9,8 @@ readTime: "3 min read"
 
 SiteBuilder is now fully internationalized with support for English and German. Every button, label, message, and notification has been translated, giving teams a native-language experience.
 
+![SiteBuilder Content editor with EN/DE language switcher and prompt suggestions](https://dx-tooling.org/sitebuilder-assets/webapp-screenshots/web-versions/SiteBuilder-content-editor-with-remote-assets-sidebar-and-prompt-suggestions-1600x1292.png)
+
 # What Changed
 
 The entire application is now available in two languages:

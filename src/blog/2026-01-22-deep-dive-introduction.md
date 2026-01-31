@@ -16,6 +16,8 @@ Our contributor Manuel Kießling has written a comprehensive introduction to Sit
 
 The post includes a demo video showing SiteBuilder in action.
 
+![SiteBuilder Your projects dashboard with multiple projects](https://dx-tooling.org/sitebuilder-assets/webapp-screenshots/web-versions/SiteBuilder-your-projects-dashboard-four-projects-with-conversation-status-and-deleted-projects-1509x1600.png)
+
 **[Read the full article on manuel.kiessling.net →](https://manuel.kiessling.net/2026/01/25/introducing-sitebuilder/)**
 
 If you're evaluating SiteBuilder for your team or just want to understand how it works under the hood, this is a great place to start.

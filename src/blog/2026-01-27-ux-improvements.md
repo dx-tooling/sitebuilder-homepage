@@ -11,6 +11,8 @@ readTime: "2 min read"
 
 Several UX improvements make it easier to track what changed and review content edits.
 
+![SiteBuilder Your projects dashboard with multiple projects](https://dx-tooling.org/sitebuilder-assets/webapp-screenshots/web-versions/SiteBuilder-your-projects-dashboard-four-projects-with-conversation-status-and-deleted-projects-1509x1600.png)
+
 # Read-Only Conversation View
 
 Previously, when you navigated to a finished conversation, you were redirected to the project list. Not ideal when you wanted to review what changes were discussed or share a conversation with a colleague.

@@ -13,6 +13,8 @@ We've shipped several features this month that give you more control over your S
 
 The most requested feature is here: you can now use your own LLM API keys instead of relying on a shared platform key.
 
+![SiteBuilder Edit project: GitHub access key and LLM API key — bring your own keys](https://dx-tooling.org/sitebuilder-assets/webapp-screenshots/web-versions/SiteBuilder-edit-project-GitHub-access-key-and-LLM-API-key-bring-your-own-keys-1291x1600.png)
+
 **Why this matters:**
 - **Cost control**: Pay only for what you use, directly to your provider
 - **Usage visibility**: See exactly what you're spending in your own dashboard
