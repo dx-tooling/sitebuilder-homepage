@@ -146,7 +146,7 @@ export default function markdownToHtmlLoader(source) {
                 <a href="../index.html" class="text-teal-600 dark:text-teal-400 hover:underline">← Back to Home</a>
             </div>
             <div class="mt-6 text-sm text-gray-500 dark:text-gray-400 flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
-                A DX Tooling project, sponsored by
+                Sponsored by
                 <a href="https://www.joboo.de" class="inline-flex items-center hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded" rel="noopener noreferrer" target="_blank" aria-label="JOBOO! GmbH">
                     <img src="https://webassets.cdn.www.joboo.de/assets/images/joboo-inverted.png" alt="JOBOO! GmbH" class="h-5 w-auto" width="2570" height="843" loading="lazy">
                 </a>
