@@ -59,7 +59,7 @@
                 #ffffff 100%
             );
             background-size: 300% 100%;
-            background-position: 100% center;
+            background-position: 0% center;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -68,12 +68,24 @@
 
         /* One sweep left-to-right after the explosion settles */
         [data-reverse-explosion].is-active .hero-title {
-            animation: hero-shimmer 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.1s 1 forwards;
+            animation: hero-shimmer 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.1s 1;
         }
 
         @keyframes hero-shimmer {
             0%   { background-position: 100% center; }
             100% { background-position: 0% center; }
+        }
+
+        /* After shimmer ends, drop the background-clip technique entirely
+           so Firefox doesn't leave the text invisible.
+           Selector must beat [data-reverse-explosion].is-active .hero-title (0-3-0). */
+        [data-reverse-explosion].is-active .hero-title.shimmer-done {
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            -webkit-text-fill-color: unset;
+            color: #ffffff;
+            animation: none;
         }
 
         /* ── Replay button: subtle, bottom-right ── */

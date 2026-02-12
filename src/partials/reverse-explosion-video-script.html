@@ -45,8 +45,20 @@
         if (replay) replay.classList.remove('is-visible');
     }
 
+    // After the shimmer CSS animation finishes, swap to plain white text
+    // so Firefox doesn't blank out the background-clip:text element.
+    var heroTitle = container.querySelector('.hero-title');
+    if (heroTitle) {
+        heroTitle.addEventListener('animationend', function() {
+            heroTitle.classList.add('shimmer-done');
+        });
+    }
+
     function play() {
         hideReplay();
+
+        // Reset shimmer state for replay.
+        if (heroTitle) heroTitle.classList.remove('shimmer-done');
 
         // 1. Remove active state and disable transitions so the browser
         //    commits the scattered positions without animating to them.
