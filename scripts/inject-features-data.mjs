@@ -17,8 +17,8 @@ const placeholder = "<!-- FEATURES_DATA -->";
 
 const html = fs.readFileSync(htmlPath, "utf8");
 if (!html.includes(placeholder)) {
-  console.warn("inject-features-data: placeholder not found in dist/features.html, skipping");
-  process.exit(0);
+    console.warn("inject-features-data: placeholder not found in dist/features.html, skipping");
+    process.exit(0);
 }
 
 const data = JSON.parse(fs.readFileSync(dataPath, "utf8"));

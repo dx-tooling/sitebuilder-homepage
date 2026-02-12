@@ -138,9 +138,7 @@ module.exports = (env, argv) => {
         plugins: [
             ...htmlPlugins,
             new CopyWebpackPlugin({
-                patterns: [
-                    { from: "src/static/features-data.json", to: "features-data.json" },
-                ],
+                patterns: [{ from: "src/static/features-data.json", to: "features-data.json" }],
             }),
             new MiniCssExtractPlugin({
                 // Use contenthash for production builds, simple name for development

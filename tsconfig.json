@@ -1,15 +1,15 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "node16",
-    "target": "es2017",
-    "jsx": "react",
-    "allowJs": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node16",
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "types": ["webpack-env", "vitest/globals"]
-  }
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "node16",
+        "target": "es2017",
+        "jsx": "react",
+        "allowJs": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node16",
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "types": ["webpack-env", "vitest/globals"]
+    }
 }
