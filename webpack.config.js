@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const glob = require("glob");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -136,6 +137,11 @@ module.exports = (env, argv) => {
         },
         plugins: [
             ...htmlPlugins,
+            new CopyWebpackPlugin({
+                patterns: [
+                    { from: "src/static/features-data.json", to: "features-data.json" },
+                ],
+            }),
             new MiniCssExtractPlugin({
                 // Use contenthash for production builds, simple name for development
                 filename: isProduction ? "styles/[name].[contenthash].css" : "styles/[name].css",

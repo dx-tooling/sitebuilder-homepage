@@ -1,0 +1,670 @@
+{
+  "commits": {
+    "8804718": {
+      "date": "2026-01-22",
+      "features": {
+        "Token Usage Display": {
+          "description": "Visual progress bar shows tokens used vs. maximum context window. See input and output tokens separately.",
+          "category": "cost-tracking"
+        },
+        "Real-Time Cost Estimation": {
+          "description": "See estimated costs as you chat. Input cost, output cost, and total are displayed to 4 decimal places.",
+          "category": "cost-tracking"
+        },
+        "Model Name Display": {
+          "description": "Always know which AI model is being used for your editing session.",
+          "category": "cost-tracking"
+        }
+      }
+    },
+    "ad0f9f9": {
+      "date": "2026-01-18",
+      "features": {
+        "Create Project": {
+          "description": "Set up new projects by connecting a GitHub repository. Configure the project name, repository URL, and access credentials.",
+          "category": "project-management"
+        },
+        "Connect GitHub Repository": {
+          "description": "Link any GitHub repository containing your website or landing pages. Supports both public and private repositories.",
+          "category": "github-integration"
+        },
+        "Personal Access Token": {
+          "description": "Use fine-grained or classic personal access tokens. UI guidance helps you create tokens with the right permissions.",
+          "category": "github-integration"
+        },
+        "CSRF Protection": {
+          "description": "All forms include CSRF tokens. Requests without valid tokens are rejected.",
+          "category": "security"
+        },
+        "Secure Token Storage": {
+          "description": "GitHub tokens and API keys are stored securely. Masked input fields prevent shoulder surfing.",
+          "category": "security"
+        },
+        "Dark Mode Support": {
+          "description": "Full dark theme throughout the application. Toggle between light and dark mode with persistence.",
+          "category": "ui-ux"
+        },
+        "Responsive Design": {
+          "description": "Mobile-friendly layouts that adapt to any screen size. Work from your phone, tablet, or desktop.",
+          "category": "ui-ux"
+        },
+        "Flash Notifications": {
+          "description": "Success, error, and warning messages displayed as toast-style alerts. Clear feedback on every action.",
+          "category": "ui-ux"
+        },
+        "Keyboard Navigation": {
+          "description": "Full keyboard support with proper focus management. Navigate efficiently without a mouse.",
+          "category": "ui-ux"
+        },
+        "Empty States": {
+          "description": "Helpful messages when there's no data to show. Guidance on what to do next instead of blank screens.",
+          "category": "ui-ux"
+        },
+        "Error Pages": {
+          "description": "Dedicated error pages with recovery options. Clear explanations of what went wrong and how to fix it.",
+          "category": "ui-ux"
+        },
+        "User Registration": {
+          "description": "Sign up with email and password. Get started with your own projects immediately.",
+          "category": "account"
+        },
+        "Secure Authentication": {
+          "description": "Password-based authentication with secure session management.",
+          "category": "account"
+        },
+        "Account Dashboard": {
+          "description": "View your account details including email address and member-since date.",
+          "category": "account"
+        },
+        "Sign Out": {
+          "description": "Securely end your session from any page. Session is fully cleared on sign out.",
+          "category": "account"
+        }
+      }
+    },
+    "3704aea": {
+      "date": "2026-01-22",
+      "features": {
+        "List Projects": {
+          "description": "View all your projects in a dashboard with real-time workspace status indicators showing availability, active sessions, and review state.",
+          "category": "project-management"
+        },
+        "Project Status Overview": {
+          "description": "See at a glance which projects have active editing sessions, are awaiting review, or are available for new work.",
+          "category": "project-management"
+        },
+        "Start New Conversation": {
+          "description": "Begin a new editing session for any available project. The workspace initializes automatically if needed.",
+          "category": "content-editing"
+        },
+        "Resume Conversation": {
+          "description": "Pick up where you left off. Active conversations can be resumed from the project list.",
+          "category": "content-editing"
+        },
+        "Finish Conversation": {
+          "description": "End your editing session when done. The workspace becomes available for others or for your next session.",
+          "category": "content-editing"
+        },
+        "Send to Review": {
+          "description": "Submit your changes for review with one click. A GitHub pull request is created automatically.",
+          "category": "content-editing"
+        },
+        "Automatic Workspace Setup": {
+          "description": "Workspaces initialize automatically when you start your first conversation. No manual setup required.",
+          "category": "workspace-management"
+        },
+        "Setup Progress UI": {
+          "description": "Watch workspace initialization with a progress indicator. Status updates in real-time until setup completes.",
+          "category": "workspace-management"
+        },
+        "Reset Workspace": {
+          "description": "Reset a workspace to start fresh. Ends active sessions and returns the workspace to available state.",
+          "category": "workspace-management"
+        },
+        "Problem Recovery": {
+          "description": "If a workspace enters an error state, a dedicated problem page offers recovery options to reset and try again.",
+          "category": "workspace-management"
+        },
+        "Workspace Status Badges": {
+          "description": "Color-coded badges show workspace state: available, in setup, in conversation, in review, merged, or problem.",
+          "category": "workspace-management"
+        },
+        "Active User Display": {
+          "description": "See who's currently using a workspace. The active user's email is shown when a conversation is in progress.",
+          "category": "workspace-management"
+        },
+        "Automatic Branch Creation": {
+          "description": "Each workspace gets its own Git branch. Changes are isolated until merged, keeping your main branch clean.",
+          "category": "github-integration"
+        },
+        "Automatic PR Creation": {
+          "description": "When you send changes for review, a GitHub pull request is created automatically with all your commits.",
+          "category": "github-integration"
+        },
+        "Git Commit History": {
+          "description": "Every change is tracked in Git with clear commit messages. Full history is preserved for auditing.",
+          "category": "github-integration"
+        },
+        "Reviewer Dashboard": {
+          "description": "Dedicated dashboard for reviewers showing all workspaces awaiting review with project details and quick actions.",
+          "category": "review-workflow"
+        },
+        "Mark as Merged": {
+          "description": "After merging on GitHub, mark the workspace as merged. This transitions it to merged status for tracking.",
+          "category": "review-workflow"
+        },
+        "Reopen for Changes": {
+          "description": "Need revisions? Reopen a workspace for additional edits without losing the existing branch and PR.",
+          "category": "review-workflow"
+        },
+        "Role-Based Access": {
+          "description": "Reviewer role provides access to the review dashboard and approval actions. Regular users can only submit for review.",
+          "category": "review-workflow"
+        },
+        "Workspace Locking": {
+          "description": "Workspaces in review are locked. No additional edits can be made until a reviewer reopens them.",
+          "category": "review-workflow"
+        },
+        "Conversation Ownership": {
+          "description": "Users can only access their own active conversations. Role-based access controls protect sensitive operations.",
+          "category": "security"
+        }
+      }
+    },
+    "6a878d7": {
+      "date": "2026-01-25",
+      "features": {
+        "Edit Project Settings": {
+          "description": "Update project configuration at any time: change the name, update credentials, switch runtime environments, or modify agent instructions.",
+          "category": "project-management"
+        },
+        "Background Instructions": {
+          "description": "Set context for the agent: what kind of project is this? What's the brand voice? What conventions should it follow?",
+          "category": "agent-configuration"
+        },
+        "Step Instructions": {
+          "description": "Guide how the agent approaches tasks. Should it be conservative or creative? Ask questions or make assumptions?",
+          "category": "agent-configuration"
+        },
+        "Output Instructions": {
+          "description": "Control final output format. What should responses include? How should they be structured?",
+          "category": "agent-configuration"
+        },
+        "Project Type Templates": {
+          "description": "Sensible defaults based on project type. Landing pages get different defaults than documentation projects.",
+          "category": "agent-configuration"
+        },
+        "Runtime Environment Selection": {
+          "description": "Choose which Docker image to use: Node.js 18/20/22, Python 3.12, PHP 8.4, or specify a custom image.",
+          "category": "agent-configuration"
+        },
+        "Custom Docker Images": {
+          "description": "Need special tools? Specify any Docker image and SiteBuilder validates it exists before saving.",
+          "category": "agent-configuration"
+        },
+        "LLM Provider Selection": {
+          "description": "Choose your AI provider. Currently supports OpenAI and Anthropic with extensible provider architecture.",
+          "category": "agent-configuration"
+        },
+        "Collapsible Advanced Section": {
+          "description": "Agent configuration lives in a collapsible \"Advanced\" section. Quick setup stays simple; power users can customize.",
+          "category": "agent-configuration"
+        }
+      }
+    },
+    "4c495ee": {
+      "date": "2026-01-25",
+      "features": {
+        "Soft Delete Projects": {
+          "description": "Delete projects safely with soft deletion. Deleted projects move to a \"Deleted Projects\" section for potential recovery.",
+          "category": "project-management"
+        }
+      }
+    },
+    "76a628d": {
+      "date": "2026-01-25",
+      "features": {
+        "Restore Deleted Projects": {
+          "description": "Changed your mind? Restore soft-deleted projects back to active status with a single click.",
+          "category": "project-management"
+        }
+      }
+    },
+    "fa6d741": {
+      "date": "2026-01-25",
+      "features": {
+        "Permanent Deletion": {
+          "description": "Permanently remove projects when you're certain. A confirmation dialog prevents accidental permanent deletion.",
+          "category": "project-management"
+        }
+      }
+    },
+    "6d48ec4": {
+      "date": "2026-01-22",
+      "features": {
+        "Quick Links": {
+          "description": "Direct links from the project list to GitHub repository, workspace branch, and pull requests for fast navigation.",
+          "category": "project-management"
+        },
+        "Branch URL Display": {
+          "description": "View the workspace branch on GitHub directly to see all committed changes before PR creation.",
+          "category": "github-integration"
+        },
+        "Repository Quick Links": {
+          "description": "Jump to the GitHub repository from anywhere in SiteBuilder to view the full codebase.",
+          "category": "github-integration"
+        }
+      }
+    },
+    "fe1d01b": {
+      "date": "2026-01-20",
+      "features": {
+        "Chat-Based Editing": {
+          "description": "Describe changes in natural language: \"Update the hero headline\" or \"Change the support email.\" The AI agent makes the edits for you.",
+          "category": "content-editing"
+        },
+        "Real-Time Streaming": {
+          "description": "Watch the AI's response stream in real-time. See changes as they're being made, not just the final result.",
+          "category": "content-editing"
+        },
+        "Auto-Scroll Toggle": {
+          "description": "Keep the newest messages in view automatically, or disable auto-scroll to read at your own pace.",
+          "category": "content-editing"
+        },
+        "Enter-to-Send Toggle": {
+          "description": "Submit instructions by pressing Enter, or toggle off to write multi-line messages.",
+          "category": "content-editing"
+        },
+        "Live Preview Pages": {
+          "description": "Auto-discovered list of built HTML pages updates every 3 seconds. Click to preview your changes instantly.",
+          "category": "content-editing"
+        },
+        "Loading States": {
+          "description": "Spinners and progress indicators during async operations. Never wonder if something is happening.",
+          "category": "ui-ux"
+        },
+        "Collapsible Sections": {
+          "description": "Advanced settings, deleted projects, and technical details live in collapsible sections. Clean UI by default.",
+          "category": "ui-ux"
+        }
+      }
+    },
+    "8e2902b": {
+      "date": "2026-01-23",
+      "features": {
+        "Markdown Rendering": {
+          "description": "AI responses are rendered as formatted markdown with code highlighting, lists, and proper typography.",
+          "category": "content-editing"
+        }
+      }
+    },
+    "aa54996": {
+      "date": "2026-01-20",
+      "features": {
+        "Message History": {
+          "description": "Scroll through the complete conversation history. Every instruction and response is preserved.",
+          "category": "content-editing"
+        }
+      }
+    },
+    "5bb24c2": {
+      "date": "2026-01-25",
+      "features": {
+        "Activity Indicators": {
+          "description": "See \"Thinking\" and \"Working\" badges showing AI activity. Track tool call counts during active sessions.",
+          "category": "content-editing"
+        },
+        "Tool Call Counter": {
+          "description": "See how many tool calls the agent has made during the session. Helps understand complexity and cost.",
+          "category": "cost-tracking"
+        }
+      }
+    },
+    "4c4fca0": {
+      "date": "2026-01-22",
+      "features": {
+        "Technical Details View": {
+          "description": "Expand technical containers to see exactly which files were read, modified, or created.",
+          "category": "content-editing"
+        }
+      }
+    },
+    "b45d0b6": {
+      "date": "2026-01-26",
+      "features": {
+        "Shareable Preview URLs": {
+          "description": "The agent provides browser-accessible preview links that you can share with colleagues for review.",
+          "category": "content-editing"
+        }
+      }
+    },
+    "6f3d9d4": {
+      "date": "2026-01-26",
+      "features": {
+        "View Finished Conversations": {
+          "description": "Access read-only views of past conversations to see what changes were discussed and made.",
+          "category": "content-editing"
+        },
+        "View Conversation History": {
+          "description": "See the original conversation that led to the changes. Understand context before reviewing the PR.",
+          "category": "review-workflow"
+        }
+      }
+    },
+    "c37f831": {
+      "date": "2026-01-26",
+      "features": {
+        "Smart Commit Messages": {
+          "description": "The agent suggests descriptive commit messages that reflect actual changes, in the language you're chatting in.",
+          "category": "content-editing"
+        }
+      }
+    },
+    "ab7983c": {
+      "date": "2026-01-29",
+      "features": {
+        "Prompt Suggestions": {
+          "description": "Clickable prompt suggestions from your project configuration. Hover to expand, click to insert at cursor position.",
+          "category": "content-editing"
+        }
+      }
+    },
+    "c0d5e05": {
+      "date": "2026-01-27",
+      "features": {
+        "Remote Asset Manifest": {
+          "description": "Configure external asset manifest URLs per project. Reference images and media from centralized asset repositories.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "d43065b": {
+      "date": "2026-01-27",
+      "features": {
+        "Asset Browser UI": {
+          "description": "Collapsible browser panel displays all available remote assets. Search and filter to find what you need quickly.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "a18f7be": {
+      "date": "2026-01-27",
+      "features": {
+        "Image Previews": {
+          "description": "Visual thumbnails for image assets in the browser. See what you're selecting before inserting into content.",
+          "category": "remote-content-assets"
+        },
+        "Click-to-Insert": {
+          "description": "Select an asset and click to insert its URL directly into your chat message or instruction.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "75c969e": {
+      "date": "2026-01-27",
+      "features": {
+        "S3 Asset Upload": {
+          "description": "Upload new images directly to S3 from the editing interface. Supports IAM role assumption for secure access.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "1db53d8": {
+      "date": "2026-01-27",
+      "features": {
+        "Drag-and-Drop Upload": {
+          "description": "Drop images directly into the upload area. Responsive side-by-side layout on wider screens.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "69af6f6": {
+      "date": "2026-01-27",
+      "features": {
+        "Asset Search Filter": {
+          "description": "Filter assets by filename or path. Regex-powered search for advanced filtering needs.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "c4b0815": {
+      "date": "2026-01-27",
+      "features": {
+        "Agent Asset Tools": {
+          "description": "The AI agent can list, search, and get info about remote assets to help with content editing tasks.",
+          "category": "remote-content-assets"
+        }
+      }
+    },
+    "a03e139": {
+      "date": "2026-01-23",
+      "features": {
+        "Heartbeat Tracking": {
+          "description": "10-second heartbeats track active sessions. Stale conversations are automatically released after 5 minutes of inactivity.",
+          "category": "workspace-management"
+        }
+      }
+    },
+    "48ee108": {
+      "date": "2026-01-23",
+      "features": {
+        "Docker Isolation": {
+          "description": "Each workspace runs in an isolated Docker container with resource limits. No cross-workspace access is possible.",
+          "category": "workspace-management"
+        },
+        "Docker Container Isolation": {
+          "description": "All agent commands execute in ephemeral Docker containers. Containers are destroyed after each command.",
+          "category": "security"
+        },
+        "Filesystem Sandboxing": {
+          "description": "Each workspace is mounted at /workspace inside the container. The agent can only see and modify its own files.",
+          "category": "security"
+        },
+        "Path Traversal Protection": {
+          "description": "All file operations are validated. Attempts to access paths outside the workspace (using ../) are blocked.",
+          "category": "security"
+        },
+        "Resource Limits": {
+          "description": "Containers run with defined memory (2GB) and CPU (2 cores) limits to prevent runaway processes.",
+          "category": "security"
+        },
+        "No Cross-Workspace Access": {
+          "description": "Operations in one workspace cannot read or write files in another. Complete isolation between projects.",
+          "category": "security"
+        }
+      }
+    },
+    "5dde420": {
+      "date": "2026-01-25",
+      "features": {
+        "PR URL Display": {
+          "description": "Direct links to pull requests from the project list and reviewer dashboard. One click to see the diff on GitHub.",
+          "category": "github-integration"
+        }
+      }
+    },
+    "629df31": {
+      "date": "2026-01-25",
+      "features": {
+        "Bring Your Own Key (BYOK)": {
+          "description": "Use your own LLM API keys. Pay directly to your provider with full visibility into your own usage dashboard.",
+          "category": "cost-tracking"
+        },
+        "Key Reuse Across Projects": {
+          "description": "Already configured a key? Select from previously used keys when setting up new projects.",
+          "category": "cost-tracking"
+        },
+        "API Key Verification": {
+          "description": "Keys are validated in real-time against the provider API. Know immediately if there's an issue.",
+          "category": "cost-tracking"
+        },
+        "Auto-Detect Provider": {
+          "description": "Paste your key and SiteBuilder automatically detects whether it's OpenAI or Anthropic.",
+          "category": "cost-tracking"
+        }
+      }
+    },
+    "4e0ef83": {
+      "date": "2026-01-28",
+      "features": {
+        "Workspace Rules Tool": {
+          "description": "Place markdown files in .sitebuilder/rules/ to give the agent project-specific conventions and guidelines.",
+          "category": "agent-configuration"
+        }
+      }
+    },
+    "5db64e1": {
+      "date": "2026-01-26",
+      "features": {
+        "Workflow Documentation": {
+          "description": "Public /workflow-docs page with interactive Mermaid diagrams showing workspace lifecycle states and transitions.",
+          "category": "ui-ux"
+        }
+      }
+    },
+    "b943cf7": {
+      "date": "2026-01-26",
+      "features": {
+        "Multi-Language Support": {
+          "description": "Full English and German locale support with ~160 translation keys across all templates and UI components.",
+          "category": "internationalization"
+        },
+        "Locale-Prefixed Routing": {
+          "description": "Clean URL structure with /en/ and /de/ prefixes. Automatic locale detection and seamless navigation.",
+          "category": "internationalization"
+        },
+        "Language Switcher": {
+          "description": "Toggle between languages from anywhere in the application. Your language preference persists across sessions.",
+          "category": "internationalization"
+        },
+        "Localized Templates": {
+          "description": "All 14 application templates fully translated. Consistent experience regardless of language selection.",
+          "category": "internationalization"
+        }
+      }
+    }
+  },
+  "categoryFeatureOrder": {
+    "project-management": [
+      "Create Project",
+      "List Projects",
+      "Edit Project Settings",
+      "Soft Delete Projects",
+      "Restore Deleted Projects",
+      "Permanent Deletion",
+      "Project Status Overview",
+      "Quick Links"
+    ],
+    "content-editing": [
+      "Chat-Based Editing",
+      "Start New Conversation",
+      "Resume Conversation",
+      "Real-Time Streaming",
+      "Markdown Rendering",
+      "Message History",
+      "Auto-Scroll Toggle",
+      "Enter-to-Send Toggle",
+      "Activity Indicators",
+      "Technical Details View",
+      "Live Preview Pages",
+      "Shareable Preview URLs",
+      "Finish Conversation",
+      "Send to Review",
+      "View Finished Conversations",
+      "Smart Commit Messages",
+      "Prompt Suggestions"
+    ],
+    "remote-content-assets": [
+      "Remote Asset Manifest",
+      "Asset Browser UI",
+      "Image Previews",
+      "Click-to-Insert",
+      "S3 Asset Upload",
+      "Drag-and-Drop Upload",
+      "Asset Search Filter",
+      "Agent Asset Tools"
+    ],
+    "workspace-management": [
+      "Automatic Workspace Setup",
+      "Setup Progress UI",
+      "Reset Workspace",
+      "Problem Recovery",
+      "Workspace Status Badges",
+      "Active User Display",
+      "Heartbeat Tracking",
+      "Docker Isolation"
+    ],
+    "github-integration": [
+      "Connect GitHub Repository",
+      "Personal Access Token",
+      "Automatic Branch Creation",
+      "Automatic PR Creation",
+      "PR URL Display",
+      "Branch URL Display",
+      "Repository Quick Links",
+      "Git Commit History"
+    ],
+    "review-workflow": [
+      "Reviewer Dashboard",
+      "View Conversation History",
+      "Mark as Merged",
+      "Reopen for Changes",
+      "Role-Based Access",
+      "Workspace Locking"
+    ],
+    "cost-tracking": [
+      "Token Usage Display",
+      "Real-Time Cost Estimation",
+      "Model Name Display",
+      "Tool Call Counter",
+      "Bring Your Own Key (BYOK)",
+      "Key Reuse Across Projects",
+      "API Key Verification",
+      "Auto-Detect Provider"
+    ],
+    "agent-configuration": [
+      "Background Instructions",
+      "Step Instructions",
+      "Output Instructions",
+      "Project Type Templates",
+      "Runtime Environment Selection",
+      "Custom Docker Images",
+      "LLM Provider Selection",
+      "Collapsible Advanced Section",
+      "Workspace Rules Tool"
+    ],
+    "security": [
+      "Docker Container Isolation",
+      "Filesystem Sandboxing",
+      "Path Traversal Protection",
+      "Resource Limits",
+      "No Cross-Workspace Access",
+      "CSRF Protection",
+      "Secure Token Storage",
+      "Conversation Ownership"
+    ],
+    "ui-ux": [
+      "Dark Mode Support",
+      "Responsive Design",
+      "Loading States",
+      "Flash Notifications",
+      "Collapsible Sections",
+      "Keyboard Navigation",
+      "Empty States",
+      "Error Pages",
+      "Workflow Documentation"
+    ],
+    "internationalization": [
+      "Multi-Language Support",
+      "Locale-Prefixed Routing",
+      "Language Switcher",
+      "Localized Templates"
+    ],
+    "account": [
+      "User Registration",
+      "Secure Authentication",
+      "Account Dashboard",
+      "Sign Out"
+    ]
+  }
+}

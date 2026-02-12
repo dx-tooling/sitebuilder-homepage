@@ -13,8 +13,8 @@
         "lint:types": "tsc --noEmit",
         "lint": "npm run lint:eslint && npm run lint:types",
         "quality": "npm run prettier:fix && npm run lint",
-        "build": "webpack --mode=development",
-        "build:prod": "webpack --mode=production"
+        "build": "webpack --mode=development && node scripts/inject-features-data.mjs",
+        "build:prod": "webpack --mode=production && node scripts/inject-features-data.mjs"
     },
     "author": "",
     "license": "MIT",
