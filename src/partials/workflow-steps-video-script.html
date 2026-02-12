@@ -1,0 +1,44 @@
+<script>
+(function() {
+    var stage = document.querySelector('[data-workflow-steps]');
+    if (!stage) return;
+
+    var replay = document.querySelector('[data-workflow-replay]');
+
+    function showReplay() {
+        if (replay) replay.classList.add('is-visible');
+    }
+
+    function hideReplay() {
+        if (replay) replay.classList.remove('is-visible');
+    }
+
+    function play() {
+        hideReplay();
+
+        // Remove active class and disable transitions for a clean reset.
+        stage.classList.remove('is-active');
+        var steps = stage.querySelectorAll('.workflow-step');
+        steps.forEach(function(s) { s.style.transition = 'none'; });
+
+        // Force reflow so the browser commits the hidden state.
+        stage.offsetHeight;
+
+        // Re-enable transitions.
+        steps.forEach(function(s) { s.style.transition = ''; });
+        stage.offsetHeight;
+
+        // Trigger the staggered fade-in.
+        stage.classList.add('is-active');
+
+        // Show replay after last step has finished:
+        // delay 2400ms + duration 700ms + 400ms buffer = ~3500ms
+        setTimeout(showReplay, 3500);
+    }
+
+    // Initial delay gives a clean gradient frame at the start of the recording.
+    setTimeout(play, 600);
+
+    if (replay) replay.addEventListener('click', play);
+})();
+</script>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full">
+
+<head>
+    <title>SiteBuilder - Workflow-Schritte</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        /* Force dark background immediately to avoid white flash during recording */
+        html { background: #1e1b4b; }
+
+        /* ── Step fade-in animation ── */
+
+        .workflow-step {
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 700ms ease-out,
+                transform 700ms ease-out;
+        }
+
+        .workflow-stage.is-active .workflow-step {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays: left to right */
+        .workflow-step:nth-child(1) { transition-delay: 0ms; }
+        .workflow-step:nth-child(2) { transition-delay: 800ms; }
+        .workflow-step:nth-child(3) { transition-delay: 1600ms; }
+        .workflow-step:nth-child(4) { transition-delay: 2400ms; }
+
+        /* ── Step number badge ── */
+
+        .step-number {
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        /* ── Image placeholder ── */
+
+        .step-image-wrapper {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .step-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ── Replay button: subtle, bottom-right ── */
+
+        .replay-btn {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 600ms ease;
+            pointer-events: none;
+        }
+        .replay-btn.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body class="h-full m-0 overflow-hidden">
+
+<!-- Full-viewport stage -->
+<section
+    class="workflow-stage relative w-full h-screen flex items-center justify-center"
+    data-workflow-steps
+>
+    <!-- Gradient background (same as reverse-explosion intro) -->
+    <div
+        class="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800"
+    ></div>
+
+    <!-- Decorative blurred orbs for depth -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-32 w-[420px] h-[420px] bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- 4-step grid -->
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-8">
+        <div class="grid grid-cols-4 gap-6">
+
+            <!-- Step 1 -->
+            <div class="workflow-step flex flex-col items-center text-center">
+                <div class="step-image-wrapper w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm shadow-lg mb-4">
+                    <!-- TODO: Replace placeholder with <img src="..." alt="Schritt 1: Chat-Editor" class="rounded-xl"> -->
+                    <div class="flex flex-col items-center justify-center gap-2 p-6 text-white/30">
+                        <span class="text-5xl font-light">1</span>
+                        <span class="text-xs uppercase tracking-wider">Bild folgt</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="step-number bg-white/20 text-white">1</span>
+                </div>
+                <p class="text-sm text-blue-100 leading-snug max-w-[200px]">Landingpage erstellen — so einfach wie ein Gespräch in WhatsApp</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="workflow-step flex flex-col items-center text-center">
+                <div class="step-image-wrapper w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm shadow-lg mb-4">
+                    <!-- TODO: Replace placeholder with <img src="..." alt="Schritt 2: KI-Bildgenerierung" class="rounded-xl"> -->
+                    <div class="flex flex-col items-center justify-center gap-2 p-6 text-white/30">
+                        <span class="text-5xl font-light">2</span>
+                        <span class="text-xs uppercase tracking-wider">Bild folgt</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="step-number bg-white/20 text-white">2</span>
+                </div>
+                <p class="text-sm text-blue-100 leading-snug max-w-[200px]">Hochwertige Bilder werden passend zur Seite per KI generiert und eingebettet</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="workflow-step flex flex-col items-center text-center">
+                <div class="step-image-wrapper w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm shadow-lg mb-4">
+                    <!-- TODO: Replace placeholder with <img src="..." alt="Schritt 3: Git-Review und Rollout" class="rounded-xl"> -->
+                    <div class="flex flex-col items-center justify-center gap-2 p-6 text-white/30">
+                        <span class="text-5xl font-light">3</span>
+                        <span class="text-xs uppercase tracking-wider">Bild folgt</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="step-number bg-white/20 text-white">3</span>
+                </div>
+                <p class="text-sm text-blue-100 leading-snug max-w-[200px]">Die IT kann Änderungen mit den gewohnten git-Prozessen prüfen und ausrollen</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="workflow-step flex flex-col items-center text-center">
+                <div class="step-image-wrapper w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm shadow-lg mb-4">
+                    <!-- TODO: Replace placeholder with <img src="..." alt="Schritt 4: Perfekte Landingpage" class="rounded-xl"> -->
+                    <div class="flex flex-col items-center justify-center gap-2 p-6 text-white/30">
+                        <span class="text-5xl font-light">4</span>
+                        <span class="text-xs uppercase tracking-wider">Bild folgt</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="step-number bg-white/20 text-white">4</span>
+                </div>
+                <p class="text-sm text-blue-100 leading-snug max-w-[200px]">Ihre perfekte Landingpage ist online — zuverlässig und schnell</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Replay button (appears after all steps have faded in) -->
+<button
+    data-workflow-replay
+    class="replay-btn px-4 py-2 text-sm font-medium text-white/70 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/40 cursor-pointer transition-colors duration-150"
+>
+    ↻ Nochmal abspielen
+</button>
+
+<include src="partials/workflow-steps-video-script.html"></include>
+
+</body>
+</html>
