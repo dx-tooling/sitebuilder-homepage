@@ -334,10 +334,6 @@
         "6a878d7": {
             "date": "2026-01-25",
             "features": {
-                "Edit Project Settings": {
-                    "description": "Update project configuration at any time: change the name, update credentials, switch runtime environments, or modify agent instructions.",
-                    "category": "project-management"
-                },
                 "Background Instructions": {
                     "description": "Set context for the agent: what kind of project is this? What's the brand voice? What conventions should it follow?",
                     "category": "agent-configuration"
@@ -387,14 +383,18 @@
                 "Restore Deleted Projects": {
                     "description": "Changed your mind? Restore soft-deleted projects back to active status with a single click.",
                     "category": "project-management"
+                },
+                "Permanent Deletion": {
+                    "description": "Permanently remove projects when you're certain. Option to fully delete after soft delete; confirmation dialog prevents accidents.",
+                    "category": "project-management"
                 }
             }
         },
         "fa6d741": {
             "date": "2026-01-25",
             "features": {
-                "Permanent Deletion": {
-                    "description": "Permanently remove projects when you're certain. A confirmation dialog prevents accidental permanent deletion.",
+                "Delete Projects": {
+                    "description": "Remove projects with a confirmation dialog. First introduction of project deletion (later extended with soft delete and restore).",
                     "category": "project-management"
                 }
             }
@@ -412,6 +412,10 @@
                 },
                 "Repository Quick Links": {
                     "description": "Jump to the GitHub repository from anywhere in SiteBuilder to view the full codebase.",
+                    "category": "github-integration"
+                },
+                "PR URL Display": {
+                    "description": "Direct links to pull requests from the project list and reviewer dashboard. One click to see the diff on GitHub.",
                     "category": "github-integration"
                 }
             }
@@ -634,15 +638,6 @@
                 }
             }
         },
-        "5dde420": {
-            "date": "2026-01-25",
-            "features": {
-                "PR URL Display": {
-                    "description": "Direct links to pull requests from the project list and reviewer dashboard. One click to see the diff on GitHub.",
-                    "category": "github-integration"
-                }
-            }
-        },
         "629df31": {
             "date": "2026-01-25",
             "features": {
@@ -702,18 +697,231 @@
                     "category": "internationalization"
                 }
             }
+        },
+        "6802211": {
+            "date": "2026-01-26",
+            "features": {
+                "PR and Conversation Links on Reviews": {
+                    "description": "Direct links to pull requests and read-only conversations from the reviewer dashboard for quick navigation.",
+                    "category": "review-workflow"
+                }
+            }
+        },
+        "a7970a1": {
+            "date": "2026-01-26",
+            "features": {
+                "Public Read-Only Conversation Access": {
+                    "description": "Any user can open the read-only view of any finished conversation to see what was discussed and changed.",
+                    "category": "review-workflow"
+                }
+            }
+        },
+        "d9de14d": {
+            "date": "2026-01-25",
+            "features": {
+                "Content Editor Layout Improvements": {
+                    "description": "Refined content editor page layout with reduced visual clutter for a cleaner editing experience.",
+                    "category": "ui-ux"
+                }
+            }
+        },
+        "df264c3": {
+            "date": "2026-01-25",
+            "features": {
+                "Hide Duplicate Add Project Button": {
+                    "description": "When no active projects exist, the duplicate Add project button is hidden to avoid confusion.",
+                    "category": "ui-ux"
+                }
+            }
+        },
+        "7e3b1b4": {
+            "date": "2026-01-29",
+            "features": {
+                "Hover-to-Expand Prompt Suggestions": {
+                    "description": "Prompt suggestion bubbles expand on hover to show full text, with smooth animation and multi-line support.",
+                    "category": "content-editing"
+                }
+            }
+        },
+        "4d70bef": {
+            "date": "2026-01-29",
+            "features": {
+                "Docker Desktop Performance Check": {
+                    "description": "Setup flow includes a check for Docker Desktop performance so you can fix resource limits before starting.",
+                    "category": "workspace-management"
+                }
+            }
+        },
+        "efbd762": {
+            "date": "2026-02-02",
+            "features": {
+                "Organization Management": {
+                    "description": "Create and manage organizations with groups, member invitations, and access rights for projects.",
+                    "category": "account"
+                }
+            }
+        },
+        "f803111": {
+            "date": "2026-02-03",
+            "features": {
+                "Cross-Organization API Key Isolation": {
+                    "description": "LLM API keys are scoped per organization so one org cannot access another org's keys.",
+                    "category": "security"
+                }
+            }
+        },
+        "3d40374": {
+            "date": "2026-02-03",
+            "features": {
+                "Collapsible Pro Settings in Add Project": {
+                    "description": "Add Project form includes a collapsible Pro Settings section to keep the form simple while allowing advanced configuration.",
+                    "category": "ui-ux"
+                }
+            }
+        },
+        "aad9bf4": {
+            "date": "2026-02-03",
+            "features": {
+                "Repository Names with Dots": {
+                    "description": "Git URL parsing supports dots in repository names so you can connect repos like my.company.website.",
+                    "category": "github-integration"
+                }
+            }
+        },
+        "628fa9f": {
+            "date": "2026-02-03",
+            "features": {
+                "Template Requirement Note on Project Link": {
+                    "description": "Add Project form shows a clear note that the repository must contain a compatible template (e.g. landing page).",
+                    "category": "project-management"
+                }
+            }
+        },
+        "d1dc08d": {
+            "date": "2026-02-03",
+            "features": {
+                "Hardened Invitation and Password Flows": {
+                    "description": "Invitation and password reset flows use CSRF protection and session refresh for stronger security.",
+                    "category": "security"
+                }
+            }
+        },
+        "040841a": {
+            "date": "2026-02-04",
+            "features": {
+                "Prefabricated Projects": {
+                    "description": "Start from prefabricated projects with hidden keys and automatic setup so you can try SiteBuilder without configuring GitHub or LLM keys.",
+                    "category": "project-management"
+                }
+            }
+        },
+        "e8b25c0": {
+            "date": "2026-02-05",
+            "features": {
+                "HTML Editor": {
+                    "description": "Edit HTML content directly in the chat interface with syntax-aware editing and live preview.",
+                    "category": "content-editing"
+                }
+            }
+        },
+        "0d66094": {
+            "date": "2026-02-06",
+            "features": {
+                "Stop or Cancel Prompt Execution": {
+                    "description": "Cancel a running prompt or agent turn at any time. No need to wait for the model to finish.",
+                    "category": "content-editing"
+                },
+                "Agent Context Dump": {
+                    "description": "Inspect the current agent context (system prompt, tools, conversation) for debugging and documentation.",
+                    "category": "content-editing"
+                }
+            }
+        },
+        "6cd120a": {
+            "date": "2026-02-07",
+            "features": {
+                "LLM Wire Log Viewer": {
+                    "description": "Developer-oriented viewer for LLM wire logs: raw HTTP capture, conversation logs, CLI streaming, and HTML viewer.",
+                    "category": "ui-ux"
+                }
+            }
+        },
+        "7c80a44": {
+            "date": "2026-02-07",
+            "features": {
+                "AI Budget Bar (Current Context vs Cumulative)": {
+                    "description": "Budget bar shows current turn context usage (shrinks when the turn ends) while total cost stays cumulative for the session.",
+                    "category": "cost-tracking"
+                }
+            }
+        },
+        "160c1e1": {
+            "date": "2026-02-07",
+            "features": {
+                "Workspace Path in System Prompt": {
+                    "description": "Workspace path is included in the system prompt so the agent retains it even when context is trimmed.",
+                    "category": "agent-configuration"
+                }
+            }
+        },
+        "1a7c94b": {
+            "date": "2026-02-07",
+            "features": {
+                "Agent Progress Updates While Working": {
+                    "description": "The agent sends chatty progress updates while working so you see what it is doing step by step.",
+                    "category": "content-editing"
+                }
+            }
+        },
+        "a2b2698": {
+            "date": "2026-02-09",
+            "features": {
+                "Automatic Turn Activity Journal": {
+                    "description": "Automatic journal of turn activity for reliable agent memory across long conversations.",
+                    "category": "agent-configuration"
+                }
+            }
+        },
+        "8e47db4": {
+            "date": "2026-02-10",
+            "features": {
+                "List Dist Files in Read-Only View": {
+                    "description": "Read-only conversation view can list built dist files so reviewers can see output artifacts.",
+                    "category": "content-editing"
+                }
+            }
+        },
+        "a80f17b": {
+            "date": "2026-02-11",
+            "features": {
+                "AI Image Generation (PhotoBuilder)": {
+                    "description": "Generate images for content pages with AI via PhotoBuilder. Supports OpenAI and Google Gemini with configurable timeouts and LLM-based filename generation on regeneration.",
+                    "category": "content-editing"
+                }
+            }
+        },
+        "5402a10": {
+            "date": "2026-02-12",
+            "features": {
+                "Full URL Display and Path/Domain Search": {
+                    "description": "Remote asset browser shows the full URL under each filename and supports search by path or domain.",
+                    "category": "remote-content-assets"
+                }
+            }
         }
     },
     "categoryFeatureOrder": {
         "project-management": [
             "Create Project",
             "List Projects",
-            "Edit Project Settings",
+            "Prefabricated Projects",
+            "Delete Projects",
             "Soft Delete Projects",
             "Restore Deleted Projects",
             "Permanent Deletion",
             "Project Status Overview",
-            "Quick Links"
+            "Quick Links",
+            "Template Requirement Note on Project Link"
         ],
         "content-editing": [
             "Chat-Based Editing",
@@ -728,17 +936,25 @@
             "Technical Details View",
             "Live Preview Pages",
             "Shareable Preview URLs",
+            "HTML Editor",
+            "AI Image Generation (PhotoBuilder)",
+            "List Dist Files in Read-Only View",
             "Finish Conversation",
             "Send to Review",
             "View Finished Conversations",
+            "Stop or Cancel Prompt Execution",
+            "Agent Context Dump",
+            "Agent Progress Updates While Working",
             "Smart Commit Messages",
-            "Prompt Suggestions"
+            "Prompt Suggestions",
+            "Hover-to-Expand Prompt Suggestions"
         ],
         "remote-content-assets": [
             "Remote Asset Manifest",
             "Asset Browser UI",
             "Image Previews",
             "Click-to-Insert",
+            "Full URL Display and Path/Domain Search",
             "S3 Asset Upload",
             "Drag-and-Drop Upload",
             "Asset Search Filter",
@@ -747,6 +963,7 @@
         "workspace-management": [
             "Automatic Workspace Setup",
             "Setup Progress UI",
+            "Docker Desktop Performance Check",
             "Reset Workspace",
             "Problem Recovery",
             "Workspace Status Badges",
@@ -757,6 +974,7 @@
         "github-integration": [
             "Connect GitHub Repository",
             "Personal Access Token",
+            "Repository Names with Dots",
             "Automatic Branch Creation",
             "Automatic PR Creation",
             "PR URL Display",
@@ -766,7 +984,9 @@
         ],
         "review-workflow": [
             "Reviewer Dashboard",
+            "PR and Conversation Links on Reviews",
             "View Conversation History",
+            "Public Read-Only Conversation Access",
             "Mark as Merged",
             "Reopen for Changes",
             "Role-Based Access",
@@ -776,6 +996,7 @@
             "Token Usage Display",
             "Real-Time Cost Estimation",
             "Model Name Display",
+            "AI Budget Bar (Current Context vs Cumulative)",
             "Tool Call Counter",
             "Bring Your Own Key (BYOK)",
             "Key Reuse Across Projects",
@@ -791,7 +1012,9 @@
             "Custom Docker Images",
             "LLM Provider Selection",
             "Collapsible Advanced Section",
-            "Workspace Rules Tool"
+            "Workspace Rules Tool",
+            "Workspace Path in System Prompt",
+            "Automatic Turn Activity Journal"
         ],
         "security": [
             "Docker Container Isolation",
@@ -801,6 +1024,8 @@
             "No Cross-Workspace Access",
             "CSRF Protection",
             "Secure Token Storage",
+            "Cross-Organization API Key Isolation",
+            "Hardened Invitation and Password Flows",
             "Conversation Ownership"
         ],
         "ui-ux": [
@@ -812,6 +1037,10 @@
             "Keyboard Navigation",
             "Empty States",
             "Error Pages",
+            "Content Editor Layout Improvements",
+            "Hide Duplicate Add Project Button",
+            "Collapsible Pro Settings in Add Project",
+            "LLM Wire Log Viewer",
             "Workflow Documentation"
         ],
         "internationalization": [
@@ -823,6 +1052,7 @@
         "account": [
             "User Registration",
             "Secure Authentication",
+            "Organization Management",
             "Account Dashboard",
             "Sign Out"
         ]
