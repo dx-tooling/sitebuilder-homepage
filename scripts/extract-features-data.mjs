@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const htmlPath = process.argv[2] || "src/features.html";
+const htmlPath = process.argv[2] || "src/all-features.html";
 const html = fs.readFileSync(htmlPath, "utf8");
 
 const sectionRe = /<section[^>]+id="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g;
